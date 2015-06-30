@@ -260,55 +260,49 @@ module XML
 		
 		def initialize(variables)
 
-			@variables = select_variables(variables)	
-			@list_groups = []
 			@uuid = UUID.new
+			@variables = select_variables variables				
+			@list_groups = get_list_groups
+			
 		end
 
 		def select_variables(variables)
 			variables.select { |variable| variable if variable.is_variable_ready? }
 		end
 
-		def prepare_list_groups	
-			@list_groups = @variables.map { |variable| { name: variable.get_vl_name, guid: @uuid.generate } }.uniq			
+		def get_list_groups	
+			@variables.map { |variable| { name: variable.get_vl_name, guid: @uuid.generate, childgroups: [] } }.uniq			
 		end
 
-		def prepare_model
+		def prepare_model			
 
-			prepare_list_groups	
+			@list_groups.each do |vl_group|
 
-			@list_groups.each do |vl_groups| 
-				
-				vl_groups[:childgroups] = []
+				vl_group[:childgroups] = 	@variables.map do |variable|
+					 							create_device_group(variable) if vl_group[:name] == variable.get_vl_name
+											end.compact!
 
-				@variables.each do |variable|
+				num = 1				
 
-					if vl_groups[:name] == variable.get_vl_name
-						
-						group = {}
-						group[:group] = { 
-											name: 			"#{variable.get_device_name}",
-											guid: 			@uuid.generate,
-											device: 		variable.get_prefix_device_name,
-											childgroups: 	get_ti_struct
-										}
-
-						vl_groups[:childgroups] <<	group
-					end	
-				end	
-
-				num = 1
-
-				vl_groups[:childgroups].each do |vl|										
-					if vl[:group][:name].include?("МИП")
-						vl[:group][:name] = "#{vl[:group][:name]}_1"						
-					else
-						vl[:group][:name] = "#{vl[:group][:name]}_#{num}"															
-					end
+				vl_group[:childgroups].each do |device_group|					
+					device_group[:group][:name] = get_device_name(device_group[:group][:name], num)
 					num += 1
+
 				end
 
 			end
+		end
+
+		def create_device_group(variable)
+			
+			group = { group: {} }
+			group[:group] = { 
+								name: 			"#{variable.get_device_name}",
+								guid: 			@uuid.generate,
+								device: 		variable.get_prefix_device_name,
+								childgroups: 	get_ti_struct
+							}
+			return group
 		end
 
 		def get_device_name(name, num)
