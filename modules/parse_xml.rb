@@ -265,14 +265,8 @@ module XML
 			@uuid = UUID.new
 		end
 
-		def prepare_list_groups
-			@variables.each do |variable|
-				@list_groups << 	{
-										name: variable.get_vl_name,
-										guid: @uuid.generate
-									}	
-			end
-			@list_groups.uniq!
+		def prepare_list_groups	
+			@list_groups = @variables.map { |variable| { name: variable.get_vl_name, guid: @uuid.generate } }.uniq			
 		end
 
 		def prepare_model
@@ -298,12 +292,15 @@ module XML
 
 				num = 1
 
-				vl_groups[:childgroups].each do |vl|										
-					if vl[:group][:name].include?("МИП")
-						vl[:group][:name] = "#{vl[:group][:name]}_1"						
-					else
-						vl[:group][:name] = "#{vl[:group][:name]}_#{num}"															
-					end
+				vl_groups[:childgroups].each do |vl|
+
+					vl_group_name = vl[:group][:name]
+
+					vl[:group][:name] = if vl_group_name.include?("МИП")
+											"#{vl_group_name}_1"						
+										else
+											"#{vl_group_name}_#{num}"															
+										end
 					num += 1
 				end
 
