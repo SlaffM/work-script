@@ -128,9 +128,9 @@ module XML
 
 		def build_variables_list		
 										
-			variables = []
+			#variables = []
 
-			variables = get_nodes(@doc).map do |i|				
+			get_nodes(@doc).map do |i|				
 				
 				name_content = i.at_css('Name').nil? ? "" : i.at_css('Name').content
 				symbaddr_content = i.at_css('SymbAddr').nil? ? "" : i.at_css('SymbAddr').content
@@ -158,7 +158,7 @@ module XML
 	
 		def initialize(file="../files/xml/equip_model.xml")			
 			@file= file	
-			#@models = {}
+
 		end				
 	
 		def expression
@@ -322,10 +322,8 @@ module XML
 			['Ia', 'Ib', 'Ic', 'Ua', 'Ub', 'Uc', 'P']
 		end
 
-		def get_ti_struct
-			ti = ti_list
-			result = []
-			result = ti.map { |elem| {group:{name: elem, guid: @uuid.generate}} }			
+		def get_ti_struct			
+			ti_list.map { |elem| {group:{name: elem, guid: @uuid.generate}} }			
 		end
 
 	end
@@ -342,10 +340,3 @@ model_helper = XML::ModelHelper.new(variables).build_model
 model = XML::ModelCreator.new(model_helper, file).link_variables_to_model
 
 file.write_document_to_xml model
-
-
-
-
-
-
-
