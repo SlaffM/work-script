@@ -272,39 +272,43 @@ module XML
 		def prepare_model
 			@list_groups.each do |vl_groups| 
 				
-				vl_groups[:childgroups] = []
+				#vl_groups[:childgroups] = []
+				num = 1
+				vl_groups[:childgroups] = 	@variables.map do |variable|
 
-				@variables.each do |variable|
-
-					if vl_groups[:name] == variable.get_vl_name
-						
-						group = {}
-						group[:group] = { 
-											name: 			"#{variable.get_device_name}",
-											guid: 			@uuid.generate,
-											device: 		variable.get_prefix_device_name,
-											childgroups: 	get_ti_struct
-										}
-
-						vl_groups[:childgroups] <<	group
-					end	
-				end	
+												if vl_groups[:name] == variable.get_vl_name
+													
+													group = {}
+													group[:group] = { 
+																		name: 			get_device_name(variable.get_device_name, num),    #"#{variable.get_device_name}",
+																		guid: 			@uuid.generate,
+																		device: 		variable.get_prefix_device_name,
+																		childgroups: 	get_ti_struct
+																	}
+													num += 1
+													group
+													#vl_groups[:childgroups] <<	group
+												end	
+											end	
+=begin
 
 				num = 1
 
 				vl_groups[:childgroups].each do |vl|
-
+					p vl[:group][:name]
 					vl_group_name = vl[:group][:name]
 
-					vl[:group][:name] = if vl_group_name.include?("МИП")
-											"#{vl_group_name}_1"						
-										else
-											"#{vl_group_name}_#{num}"															
-										end
+					vl[:group][:name] = vl_group_name.include?("МИП") ? "#{vl_group_name}_1" : "#{vl_group_name}_#{num}"
+
 					num += 1
 				end
+=end
 
 			end
+		end
+
+		def get_device_name(name, num)
+			name.include?("МИП") ? "#{name}_1" : "#{name}_#{num}"
 		end
 
 		def build_model	
@@ -333,6 +337,7 @@ file = XML::XML.new("../files/xml/1.XML")
 variables = XML::Variables.new(file).variables
 
 model_helper = XML::ModelHelper.new(variables).build_model
+model_helper.each {|elem| p elem}
 
 model = XML::ModelCreator.new(model_helper, file).link_variables_to_model
 
