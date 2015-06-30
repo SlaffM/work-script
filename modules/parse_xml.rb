@@ -260,9 +260,13 @@ module XML
 		
 		def initialize(variables)
 
-			@variables = variables.select { |variable| variable if variable.is_variable_ready? }	
+			@variables = select_variables(variables)	
 			@list_groups = []
 			@uuid = UUID.new
+		end
+
+		def select_variables(variables)
+			variables.select { |variable| variable if variable.is_variable_ready? }
 		end
 
 		def prepare_list_groups	
@@ -270,6 +274,9 @@ module XML
 		end
 
 		def prepare_model
+
+			prepare_list_groups	
+
 			@list_groups.each do |vl_groups| 
 				
 				vl_groups[:childgroups] = []
@@ -309,8 +316,6 @@ module XML
 		end
 
 		def build_model	
-
-			prepare_list_groups
 
 			prepare_model
 
