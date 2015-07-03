@@ -7,6 +7,7 @@ require 'uri'
 require 'open-uri'
 require 'axlsx'
 require 'active_support/core_ext/hash'
+require 'active_support/core_ext/hash/conversions'
 require 'uuid'
 
 module XML	
@@ -151,7 +152,8 @@ module XML
 	
 	class EquipModel	
 
-		def initialize(model, file)			
+		def initialize(model, file)
+					
 			@doc 	= file.get_doc
 			@model 	= model
 		end				
@@ -164,19 +166,14 @@ module XML
 			xml.xpath(expression)
 		end
 		
-		def get_template_doc
-			template_file = File.open(File.expand_path("../../files/xml/template_equipmodel.xml", __FILE__))
-			Nokogiri::XML(template_file)
-		end
-
 		def get_ready_model
-			doc_template = get_template_doc.root.children.at_css('Apartment/SystemModel/Model/Groups') 
+			doc_template = @doc.root.children.at_css('Apartment/SystemModel/Model/Groups') 
 
 			group_child = builder_xml_from_model.doc.root.children
 
 			doc_template.add_child group_child
 
-			p doc_template.to_xml(encoding:'utf-8')			
+			return @doc			
 		end
 
 		def process_array(label,array,xml)
@@ -199,41 +196,7 @@ module XML
 		    		process_array('group', @model, xml)  # Start the recursion with a custom name.
 		  		end
 			end
-
-			#builder#.to_xml(:encoding => 'utf-8')
 		end
-
-
-		def building_list
-
-			get_ready_model
-
-=begin
-
-
-			get_nodes(@doc).each { |model|			
-				Hash.from_xml(model.to_xml)
-			}		
-
-			puts JSON.pretty_generate(h)
-			
-			serialized = JSON.generate(h)
-			new_hash = JSON.parse(serialized, :symbolize_names => true)
-
-			
-			return new_hash
-			
-=end
-
-			#serialized = JSON.generate(@model)
-			#new_hash = JSON.parse(serialized, :symbolize_names => true)	
-
-			
-			#show_changes_in_doc @doc
-
-
-
-		end	
 
 		def show_changes_in_doc(doc)
 			get_nodes(doc).each do |group|															
@@ -387,8 +350,9 @@ model_helper = XML::ModelHelper.new(variables).prepare_model
 
 #model_helper.each {|elem| p elem}
 
-#XML::ModelLinker.new(model_helper, file_variables).link
+#link_variables = XML::ModelLinker.new(model_helper, file_variables).link
 
-#file.write_document_to_xml model
+#file_variables.write_document_to_xml link_variables
 
 equip_model = XML::EquipModel.new(model_helper, file_equipmodel).building_list
+file_equipmodel.write_document_to_xml equip_model
