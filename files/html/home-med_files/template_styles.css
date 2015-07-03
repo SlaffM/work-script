@@ -1,0 +1,3520 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 768px;
+}
+
+
+
+body {
+   	font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+	width: 100%;
+	height: 768px;
+    background-color:#bbbbb3;
+}
+a {
+	color: blue;
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	margin: 0;
+}
+img {
+	border: none;
+}
+input {
+	vertical-align: middle;
+    outline: none;
+}
+
+#wrapper {
+	width: 1024px;
+	margin: 0  auto 0;
+    background-color:#f9f9f8;
+	height: 768px;
+}
+    /*отступ сверху*/
+
+table{
+    border-collapse: collapse;
+}
+
+table td{
+    padding:0;
+}
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+    width: 994px;
+    overflow: hidden;
+    font:16px Trebuchet MS;
+    color:#000;
+    padding:0 0 0 30px;
+	height: 46px;
+	background:url('images/slice_header.png') repeat-x;
+}
+#header div{
+    float:left;
+}
+
+/*выравнивание лого*/
+#logo {
+   float:left;
+   padding:6px 0 0 0;
+}
+/*число год*/
+.day{
+    padding:10px 0 0 79px;
+}
+ /*время*/
+.time{
+    padding:10px 0 0 45px;
+}
+ /*личный кабинет*/
+#header div a{
+    font:16px/40px Trebuchet MS;
+    color:#53a41e;
+    padding:0 0 0 40px;
+    text-decoration: underline;
+}
+
+#header div a:hover{
+    color:#f1a101;
+    text-decoration: underline;
+}
+ /*помощь*/
+.help{
+    padding:5px 0 0 50px;
+}
+
+.help2 {
+    width:20px;
+    margin-bottom:-4px;
+    height:20px;
+    padding:0 4px 0 0;
+}
+/*конец вкладки меню--------------------------------------*/
+#content {
+    background-color:#f9f9f8;
+    padding-left:70px;
+    padding-right:70px;
+}
+
+/*----------------------------------------Главная страница(ШАГ №0)-----Главная страница(ШАГ №0)*/
+.titleManePage{
+    font:26px Trebuchet MS;
+    color:#000000;
+    padding:30px 0 0 0;
+}
+
+.explanationMinePage{
+    font:Italic 16px Trebuchet MS;
+    color:#606060;
+    padding:60px 0 65px 0;
+    width:820px;
+}
+
+.explanationMinePage p{
+    text-align: right;
+    padding: 40px 0 10px 0;
+}
+
+.explanationMinePage a{
+    font:Italic 16px Trebuchet MS;
+    color:#53a41e;
+    text-decoration: underline;
+}
+
+.explanationMinePage a:hover{
+    color:#f1a101;
+}
+
+.containerBigButton{
+    padding:0 75px 0 0;
+    float:left;
+}
+
+.containerBigButton a{
+    font:24px Trebuchet MS;
+    color:#ffffff;
+    display:block;
+    position: relative;
+    width:384px;
+    height:61px;
+    margin:0 0 53px 0;
+    background:url('images/mainPageButton.png') no-repeat 0 -92px;
+    text-decoration:none;
+    padding-top:30px;
+    text-align:center;
+ }
+ .containerBigButton a img {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 293px;
+ }
+
+.containerBigButton a:active, a.active{
+    background:url('images/mainPageButton.png') no-repeat 0 0;
+ }
+
+.verticalLine{
+    float:left;
+    height:384px;
+    border-left:1px solid #cccccc;
+    border-right:1px solid #ffffff;
+}
+
+.enxBigButton {
+    float:left;
+    font:Italic 16px Trebuchet MS;
+    margin:0 0 0 40px;
+    color:#303030;
+}
+
+.enxBigButton table {
+    margin-top:-30px;
+    width:380px;
+    padding:35px 0 40px 0;
+
+
+}
+.enxBigButton table td{
+        height:144px;
+}
+/*НАЧАЛО-------------------------------------------------------------ШАГ 1--------ШАГ 1------ШАГ 1*/
+/* Menu*/
+.talon_step1{
+    background: url(images/slice_talon.png) 0 0;
+    width:339px;
+    height:3px;
+    float:right;
+    padding:8px 0 0 30px;
+    margin:33px -9px 0 0;
+    font:14px/20px Trebuchet MS;
+    color:#53a41e;
+}
+
+.vkladki{
+    height:45px;
+    background-color:#8e9685;
+    list-style:none;
+    padding:20px 0 0 36px;
+}
+
+.vkladki li {
+    float:left;
+    position:relative;
+}
+
+.vkladki li a{
+    display:block;
+    float:left;
+    height:45px;
+    width:159px;
+    background:url(images/sprite_vkladki.png)  right;
+    color:#82837d;
+}
+
+.vkladki li a span{
+    display:block;
+    margin:10px 0 0 32px;
+    font:12px/12px Trebuchet MS;
+}
+
+.vkladki li a span.number{
+    font:36px Trebuchet MS;
+    margin:0 0 0 10px ;
+    float:left;
+}
+
+.vkladki li.active a {
+    background-position:left;
+    color:#53a41e;
+}
+
+.vkladki li.wasActive a{
+    background-position: center;
+    color:#82837d;
+}
+/*заголовок вкладки*/
+
+.title_step{
+    float:left;
+    width:500px;
+}
+
+.title{
+    font:26px Trebuchet MS;
+    color:#000000;
+    padding:30px 0 0 0;
+}
+
+/*объяснение того, что происходит на вкладке*/
+.explanation_step{
+    font:Italic 16px Trebuchet MS;
+    color:#606060;
+    padding:15px 0 20px 0;
+}
+
+/*сылка в объяснении того, что происходит на вкладке "Далее"*/
+.explanation_step a{
+    font:Italic 16px Trebuchet MS;
+    color:#53a41e;
+    text-decoration: underline;
+}
+
+ .explanation_step a:hover{
+    font:Italic 16px Trebuchet MS;
+    color:#f1a101;
+    text-decoration: underline;
+}
+
+.information_board{
+    float:right;
+    padding:32px 0 0 0;
+    width:347px;
+    font:14px/20px Trebuchet MS;
+    color:#53a41e;
+
+}
+
+/*подложка для информационной доски*/
+.inf_board_l_t{
+    background:url('images/inf_board.png') left top;
+    padding-left:12px;
+}
+
+.inf_board_r_t{
+    background:url('images/inf_board.png') right top;
+    padding-top:8px;
+}
+
+.inf_board_r_b{
+    background:url('images/inf_board.png') right bottom;
+    padding-right:12px;
+}
+
+.inf_board_l_b_small{
+    background:url('images/inf_board.png') left bottom;
+    margin-left:-12px;
+    padding:0 0 10px 12px;
+}
+
+
+/*блок внутри и снаружи для создания рамки двух цветов*/
+.div_outside{
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #ffffff;
+    width:100%;
+    /*margin-bottom:22px;*/
+    clear:both;
+}
+
+.div_outside_step_4 {
+    margin-bottom: 2px;
+}
+
+.div_inside{
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #cccccc;
+    height:35px;
+    font:16px/30px Trebuchet MS;
+    color:#53a41e;
+    padding:0 0 0 37px;
+
+}
+
+.oldInfBlack{
+    color:#898989;
+}
+
+/*Аккордион выбора населенного пункта-----------------------*/
+
+.accordion {
+    width:820px;
+    /*height:343px;*/
+    list-style:none;
+    padding-top: 2px;
+    /*padding-bottom: 50px;*/
+}
+
+.accordion li a{
+    display:block;
+    position:relative;
+    padding:0 0 0 5px;
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -45px;
+    border-bottom:1px solid #f9f9f8;
+}
+
+.accordion li a>span{
+    display:block;
+    height:45px;
+    background:url(images/accordion_bg_sprite.png) no-repeat right -45px;
+    padding:0 0 0 30px;
+    font:16px/25px Trebuchet MS;
+    color:#53a41e;
+    cursor:pointer;
+}
+
+.accordion li a.active{
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 0;
+    border-bottom:none;
+}
+
+.accordion li a:active{
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 0;
+    border-bottom:none;
+}
+
+.accordion li a.active>span {
+    background:url(images/accordion_bg_sprite.png) no-repeat right 0;
+    color:#fd9b0f;
+}
+
+.accordion li a:active>span {
+    background:url(images/accordion_bg_sprite.png) no-repeat right 0;
+    color:#fd9b0f;
+}
+
+.accordion li a:active.city{
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -45px;
+    border-bottom:1px solid #f9f9f8;
+}
+
+.accordion li a:active.city>span {
+    background:url(images/accordion_bg_sprite.png) no-repeat right -45px;
+    color:#fd9b0f;
+}
+
+.accordion li a span .com {
+    height:20px;
+    display:block;
+    position:relative;
+    top:-5px;
+    font:12px Trebuchet MS;
+    color:#6e6e6e;
+}
+
+.accordion li a .tr {
+    display:block;
+    position:absolute;
+    left:14px;
+    top:17px;
+    height:11px;
+    width:11px;
+    background:url(images/sprite_triangle.png) no-repeat 0 0;
+}
+
+.accordion li a.active .tr {
+    background-position:0 -11px;
+}
+
+.accordion li a:active .tr {
+    background-position:0 -11px;
+}
+
+/*----------------вложенный список-----------------*/
+.accordion li ul {
+    display: none;
+}
+.accordion li ul li{
+    margin-left:0;
+    list-style:none;
+}
+
+.accordion li ul li a {
+    margin-left:0;
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -135px;
+    list-style:none;
+}
+
+.accordion li ul li a>span{
+    background-position:right -135px;
+    padding:0 0 0 46px;
+}
+
+.accordion li ul li a:active{
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -225px;
+    border-bottom:1px solid #f9f9f8;
+}
+
+.accordion li ul li a:active span{
+    background-position:right -225px;
+    font:16px/25px Trebuchet MS;
+    color:#f9f9f8;
+}
+
+.accordion li ul li a:active span.com{
+    font:12px Trebuchet MS;
+    color:#885307;
+}
+
+.accordion li ul li a.active{
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -225px;
+    border-bottom:1px solid #f9f9f8;
+}
+
+.accordion li ul li a.active>span{
+    background-position:right -225px;
+    padding:0 0 0 46px;
+}
+
+.accordion li ul li a.active span{
+    background-position:right -225px;
+    font:16px/25px Trebuchet MS;
+    color:#f9f9f8;
+}
+
+.accordion li ul li a.active span.com{
+    font:12px Trebuchet MS;
+    color:#885307;
+}
+
+.accordion li ul li:first-child a{
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -90px;
+}
+
+.accordion li ul li:first-child a span{
+    background-position:right -90px;
+}
+
+.accordion li ul li:first-child a:active{
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -180px;
+}
+
+.accordion li ul li:first-child a:active span{
+    background-position:right -180px;
+}
+
+.accordion li ul li:first-child a.active{
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -180px;
+}
+
+.accordion li ul li:first-child a.active span{
+    background-position:right -180px;
+}
+
+/*конец Аккордиона---------------------------------*/
+
+/*НАЧАЛО-------------------------------------------------------------ШАГ 2--------ШАГ 2------ШАГ 2*/
+
+.talon_step2{
+    /*background: url(images/slice_talon.png) 0 -11px;*/
+    background: url(images/slice_talon.png) 0 -75px;
+    width:339px;
+    /*height:56px;*/
+    height:75px;
+    float:right;
+    padding:8px 10px 0 20px;
+    margin:33px -9px 0 0;
+    font:14px/20px Trebuchet MS;
+    color:#53a41e;
+}
+
+.current_week{
+    float:left;
+    width:275px;
+    text-align: center;
+    font:18px Trebuchet MS;
+    color:#000000;
+    padding-top:5px;
+}
+
+.back_week{
+    display: block;
+    background: url(images/sprite_next_back.png) 0 0;
+    width:93px;
+    height:31px;
+    float:left;
+    font:12px/14px Trebuchet MS;
+    color:#ffffff;
+    padding:4px 0 0 10px;
+    text-align:center;
+}
+
+.back_week:active{
+    background: url(images/sprite_next_back.png) left bottom;
+}
+
+.back_week.active{
+    background: url(images/sprite_next_back.png) left bottom;
+}
+.next_week{
+    display: block;
+    background: url(images/sprite_next_back.png) top right;
+    width:93px;
+    height:31px;
+    float:left;
+    font:12px/14px Trebuchet MS;
+    color:#ffffff;
+    padding:4px 10px 0 0 ;
+    text-align:center;
+}
+
+.next_week:active{
+    background: url(images/sprite_next_back.png) right bottom;
+}
+.next_week.active{
+    background: url(images/sprite_next_back.png) right bottom;
+}
+
+.back_month{
+    display: block;
+    background: url(images/sprite_next_back_month.png) 0 0;
+    width:93px;
+    height:20px;
+    float:left;
+    font:12px/14px Trebuchet MS;
+    color:#ffffff;
+    padding:4px 0 0 10px;
+    text-align:center;
+}
+
+.back_month:active{
+    background: url(images/sprite_next_back_month.png) left bottom;
+}
+
+.back_month.active{
+    background: url(images/sprite_next_back_month.png) left bottom;
+}
+.next_month{
+    display: block;
+    background: url(images/sprite_next_back_month.png) top right;
+    width:93px;
+    height:20px;
+    float:right;
+    font:12px/14px Trebuchet MS;
+    color:#ffffff;
+    padding:4px 10px 0 0 ;
+    text-align:center;
+}
+
+.next_month:active{
+    background: url(images/sprite_next_back_month.png) right bottom;
+}
+.next_month.active{
+    background: url(images/sprite_next_back_month.png) right bottom;
+}
+
+.search{
+    float:left;
+    width:250px;
+    background:url('images/search.png') no-repeat left;
+    margin:0 0 10px 0;
+    border:none;
+    height:35px;
+    font:16px Trebuchet MS;
+    color:#000000;
+    overflow: hidden;
+    padding:0 0 0 5px;
+}
+
+.search_a{
+    display: block;
+    width:52px;
+    height:35px;
+    background:url(images/keyboard.png) bottom;
+    float:left;
+    margin-right:42px;
+}
+
+.search_a:active{
+    background:url(images/keyboard.png) top;
+}
+
+
+
+.button_allChild {
+    float:right;
+    margin-right:90px;
+    text-align:center;
+    
+}
+
+.button_allChild a{
+    float:left;
+    width:112px;
+    height:29px;
+    display:block;
+    background:url('images/allChild.png') bottom;
+    font:16px Trebuchet MS;
+    color:#ffffff;
+    margin-left:20px;
+    padding-top:4px;
+    text-decoration: none;
+}
+.button_allChild a:hover {
+    color:#ffffff;
+    text-decoration: none;
+    font:16px Trebuchet MS;
+}
+
+.button_allChild a:active{
+    background-position:top;
+}
+
+.button_allChild a.active{
+    background-position:top;
+}
+
+.hr{
+    background:url('images/sliceHr.gif') repeat-x;
+    width:883px;
+    height:2px;
+    font-size:0;
+    padding:0;
+}
+
+.accordion.activCity .no_active_hospital,
+.accordion.activCity .no_active_hospital a,
+.accordion.activCity .no_active_hospital a span {
+    cursor: default;
+}
+
+.accordion.activCity .no_active_hospital a span{
+    color:#999999;
+    line-height: 1.5;
+}
+
+.accordion.activCity .no_active_hospital a:active {
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -45px;
+    color:#999999;
+}
+.accordion.activCity .no_active_hospital a:active span .com {
+    color:#999999;
+}
+.accordion.activCity .no_active_hospital a:active span {
+    background-position:right -45px;
+    color:#999999;
+}
+
+.accordion.activCity li a:active {
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -225px;
+    border-bottom:1px solid #f9f9f8;
+}
+
+.accordion.activCity li a:active span{
+    background-position:right -225px;
+    color:#ffffff;
+}
+
+.accordion.activCity li a:active span.com{
+    font:12px Trebuchet MS;
+    color:#885307;
+}
+
+.accordion.activCity li a.active {
+    background:url(images/accordion_bg_sprite.png) no-repeat 0 -225px;
+    border-bottom:1px solid #f9f9f8;
+
+}
+.accordion.activCity li a.active span{
+    background-position:right -225px;
+    color:#ffffff;
+}
+
+.accordion.activCity li a.active span.com{
+    font:12px Trebuchet MS;
+    color:#885307;
+}
+/*НАЧАЛО-------------------------------------------------------------ШАГ 3--------ШАГ 3------ШАГ 3*/
+
+.talon_step3{
+    /*background: url(images/slice_talon.png) 0 -75px;*/
+    background: url(images/slice_talon.png) 0 -158px;
+    width:339px;
+    /*height:75px;*/
+    height:94px;
+    float:right;
+    padding:8px 10px 0 20px;
+    margin:33px -9px 0 0;
+    font:14px/20px Trebuchet MS;
+    color:#53a41e;
+    /*background: url(images/slice_talon.png) 0 -11px;*/
+    /*width:339px;*/
+    /*height:56px;*/
+    /*float:right;*/
+    /*padding:8px 0 0 30px;*/
+    /*margin:33px -9px 0 0;*/
+    /*font:14px/20px Trebuchet MS;*/
+    /*color:#53a41e;*/
+}
+
+.accordion.action li ul li a span {
+    height:35px;
+    padding-top:10px;
+}
+
+/*НАЧАЛО-------------------------------------------------------------ШАГ 4--------ШАГ 4------ШАГ 4*/
+
+.talon_step4{
+    /*background: url(images/slice_talon.png) 0 -158px;*/
+    background: url(images/slice_talon.png) 0 -260px;
+    width:339px;
+    /*height:94px;*/
+    height:133px;
+    float:right;
+    padding:8px 10px 0 20px;
+    margin:33px -9px 0 0;
+    font:14px/20px Trebuchet MS;
+    color:#53a41e;
+}
+
+.explanation_step span{
+    display:block;
+    float:left;
+}
+
+.pad_step5{
+    padding-bottom:75px;
+}
+
+.yes_zap{
+     margin:7px 0 0 15px;
+     background: url('images/sprite_status.png') top;
+     width:38px;
+     height:10px;
+}
+
+.no_zap{
+    margin:7px 0 0 15px;
+    background: url('images/sprite_status.png') center;
+    width:38px;
+    height:10px;
+}
+
+.no_internet_zap{
+    margin:7px 0 0 15px;
+    background: url('images/sprite_status.png') bottom;
+    width:38px;
+    height:10px;
+}
+
+
+
+/*--------------------------------------------*/
+input[type="radio"] {
+    display: none;
+}
+
+.div_inside_step4{
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #cccccc;
+    height:42px;
+    font:14px/15px Trebuchet MS;
+    color:#000000;
+}
+
+.week_header_doctor {
+    padding: 19px 0 0 10px;
+    vertical-align: top;
+    width: 208px;
+}
+
+.week_header_cell {
+    padding: 19px 0 0 0;
+    vertical-align: top;
+    width: 64px;
+}
+
+.week_black {
+    color: black;
+    height: 44px;
+    text-align: center;
+    background: transparent;
+}
+
+.week_orange {
+    color: #FF9900;
+    height: 44px;
+    text-align: center;
+    background: transparent;
+}
+
+.week_name {
+    width: 70px;
+}
+
+.week_button_left {
+    width: 55px;
+   	height: 35px;
+   	border-width:0;
+    background:url(images/sprite_choose_day.png) left bottom;
+    position: absolute; top:3px; left:349px;
+}
+
+.week_button_left:active {
+    width: 55px;
+    height: 35px;
+    border-width:0;
+    background:url(images/sprite_choose_day.png) left top;
+    position: absolute; top:3px; left:349px;
+}
+
+.week_button_right {
+    width: 55px;
+   	height: 35px;
+   	border-width:0;
+   	margin: 0;
+    background:url(images/sprite_choose_day.png) right bottom;
+    position: absolute; top:3px; left:778px;
+}
+
+.week_button_right:active {
+    width: 55px;
+    height: 35px;
+    border-width:0;
+    background:url(images/sprite_choose_day.png) right top;
+    position: absolute; top:3px; left:778px;
+}
+
+.scroll-wrap {
+    float: left;
+    margin: 0 auto 0;
+
+}
+
+/*.scroll-pane {
+    height: 315px;
+    overflow: hidden;
+    position: relative;
+    width: 955px;
+    padding:0;
+}
+
+.jspContainer {
+    overflow: hidden;
+    position: relative;
+    width: 955px;
+    height: 315px;
+}
+
+.jspPane {
+    left: 0;
+    position: absolute;
+    padding: 5px 0 0 0;
+    top: 0;
+}*/
+
+.list_choose_doc {
+    float: left;
+    position: relative;
+    text-align: left;
+}
+
+.list_choose_time {
+    display: inline;
+    float: left;
+    width: 484px;
+    overflow: hidden;
+    padding:0 0 0 8px;
+}
+
+.table_doctor_cell {
+    text-align: center;
+    padding:0 6px 6px 0;
+    font:12px/14px Trebuchet MS;
+    color: #ffffff;
+}
+
+
+.free_talon_orange{
+    display:block;
+    text-align:right;
+    padding-right:5px;
+    color:#a06100;
+}
+
+.free_talon_green{
+    display:block;
+    text-align:right;
+    padding:0 5px 0 0;
+    color:#59832b;
+}
+
+
+.free_talon_purple{
+    display:block;
+    text-align:right;
+    padding-right:5px;
+    /*color:#910797;*/
+    color: #838701;
+}
+
+.time_table_green_step4{
+    background: url('images/sprite_time_table.png') 128px;
+    padding:15px 0 5px 0;
+    height: 31px;
+    width: 64px;
+    cursor: pointer;
+}
+.time_table_green_step4 label {cursor: pointer;}
+
+.time_table_gray_step4{
+    background: url('images/sprite_time_table.png') right;
+    color: #636363;
+    padding: 15px 0 5px;
+    height: 31px;
+    width: 64px;
+}
+
+
+.time_table_orange_step4{
+    background: url('images/sprite_time_table.png') -64px;
+    padding:15px 0 0 0;
+    height: 36px;
+    width: 64px;
+    text-align: center;
+
+}
+
+.time_table_purple_step4{
+    background: url('images/sprite_time_table.png') 0;
+    padding:15px 0 0 0;
+    height: 36px;
+    width: 64px;
+    text-align: center;
+    cursor: pointer;
+    color: #676a01;
+}
+.time_table_purple_step4 label {cursor: pointer;}
+
+.div_table_week{
+    display: inline;
+    float: left;
+    width: 342px;
+    overflow: hidden;}
+
+.table_week {
+    margin: 0 0 0 0;
+    font:14px/15px Trebuchet MS;
+    color: #53a41e;
+    border-bottom: 1px solid #e2e2e2;
+    border-top: 1px solid #ffffff;
+}
+
+/*.dotted {*/
+   /**/
+/*}*/
+
+.table_doctor {
+    /*height: 59px;*/
+    text-align: left;
+    vertical-align: middle;
+    width: 215px;
+}
+
+.table_doctor_line{
+    padding-left:10px;
+}
+
+.table_doctor_line span {
+    display: block;
+    width: 182px;
+    color: #999999;
+    white-space: nowrap;
+}
+
+.table_doctor_room {
+    height: 57px;
+    text-align: center;
+    vertical-align: middle;
+    color:#000000;
+    width: 70px;
+}
+
+/*НАЧАЛО-------------------------------------------------------------ШАГ 5--------ШАГ 5------ШАГ 5*/
+
+.current_day{
+    float:left;
+    width:233px;
+    text-align: center;
+    font:18px Trebuchet MS;
+    color:#000000;
+    padding-top:5px;
+}
+
+.title_help{
+    font:26px Trebuchet MS;
+    color:#1b7bcf;
+}
+
+.talon_step5
+{
+    background: url(images/slice_talon.png) 0 -400px;
+    width:339px;
+    height:155px;
+    float:right;
+    padding:8px 10px 0 20px;
+    margin:33px -9px 0 0;
+    font:14px/20px Trebuchet MS;
+    color:#53a41e;
+}
+
+.choose_day {
+    margin:3px 0 20px 3px;
+    width:414px;
+}
+
+.today{
+    text-align:center;
+}
+
+.today div{
+    font:bold 16px Trebuchet MS;width:300px;
+}
+
+.day_button_left{
+	background: url('images/day_left.png');
+	width: 55px;
+	height: 35px;
+	border-width:0;
+    font:14px/15px Trebuchet MS;
+    color: #fff;
+}
+
+.day_button_right{
+	background: url('images/day_right.png');
+	width: 55px;
+	height: 35px;
+    border-width:0;
+    font:14px/15px Trebuchet MS;
+    color: #fff;
+}
+
+.day_button_left .day_button_position_left{
+    display:block;
+    width:66px;
+    text-align:center;
+    padding:0 0 3px 0;
+    font: normal 14px/15px Trebuchet MS;
+    color: #fff;
+}
+
+.day_button_right .day_button_position_right{
+    display:block;
+    width:44px;
+    text-align:center;
+    padding:0 11px 3px 0;
+    font: normal 14px/15px Trebuchet MS;
+    color: #fff;
+}
+
+.choose_doc_time{
+    font:14px Trebuchet MS;
+    color: #ffffff;
+}
+
+.choose_doc_time{
+    padding:3px;
+}
+
+.choose_doc_time>div {
+    display:block;
+	border-width: 0;
+    padding:18px 0 0 0;
+    height:33px;
+    width: 64px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.green_button_time {
+	background:url('images/sprite_time_table.png') 128px;
+}
+
+.gray_button_time {
+	background:url('images/sprite_time_table.png') 64px;
+}
+
+.orange_button_time {
+	background:url('images/sprite_time_table.png') 192px;
+}
+
+.purple_button_time {
+	background:url('images/sprite_time_table.png') 256px;
+}
+
+/*подложка для информационной доски 2*/
+
+.inf_board2_t_l{
+    background: url('images/inf_board2_corner.png') top left;
+    width:26px;
+    height: 26px;
+}
+.inf_board2_t_r{
+    background: url('images/inf_board2_corner.png') top right;
+    width:26px;
+}
+
+.inf_board2_b_l{
+    background: url('images/inf_board2_corner.png') bottom left;
+    height: 26px;
+}
+.inf_board2_b_r{
+    background: url('images/inf_board2_corner.png') bottom right;
+}
+
+.inf_board2_b_r{
+    background: url('images/inf_board2_corner.png') bottom right;
+}
+
+.inf_board2_middle{
+    padding:0 15px 20px 15px;
+    background-color:#f7f5ef;
+    font:16px/20px Trebuchet MS;
+    color:#53a41e;
+}
+
+.inf_board2_slice_t{
+    background: url('images/inf_board2_slice_t.png') repeat-x;
+}
+
+.inf_board2_slice_b{
+     background: url('images/inf_board2_slice_b.png') repeat-x;
+ }
+
+.inf_board2_slice_l{
+    background: url('images/inf_board2_slice_l.png') repeat-y;
+}
+
+.inf_board2_slice_r{
+    background: url('images/inf_board2_slice_r.png') repeat-y;
+}
+
+.inf_board2_middle span{
+    color:#000000;
+    font:14px Trebuchet MS;
+}
+
+.inf_board2_middle .title {
+    color:#f1a201;
+    font:16px/35px Trebuchet MS;
+}
+
+.inf_board2_middle .green{
+    color:#53a41e;
+}
+
+.inf_board2_middle .green2{
+    color:#53a41e;
+    background: url('images/galochka_marker.png') no-repeat 0 5px;
+    padding-left:12px;
+}
+
+.inf_board2_middle .gray{
+    color:#b3b3b3;
+    background: url('images/krest_marker.png') no-repeat 0 6px;
+    padding-left:12px;
+}
+
+.inf_board_triangle{
+    position: relative;
+    top:-10px;
+    left:-4px;
+    margin-right:-16px;
+    width:16px;
+    height:31px;
+    background: url('images/inf_board_bot_triangle.png') no-repeat;
+}
+
+.inf_board_3{
+    position: fixed;
+    left:50%;
+    top:34px;
+    width:638px;
+    margin-left:-319px;
+    z-index: 2;
+}
+/* .inf_board_3{
+    position: absolute;
+    left:0;
+    top:0;
+    width:638px;
+    margin:-405px 0 0 193px;
+    z-index: 2;
+} */
+
+.add_marg{
+    margin:-550px 0 0 193px;
+}
+
+.inf_board_3 p{
+    padding-bottom:18px;
+}
+
+.inf_board_3 .inf_board2_middle{
+    color:#606060;
+    font:Italic 16px "Trebuchet MS";
+    padding:0 14px 6px 14px;
+}
+
+.inf_board_3 .inf_board2_middle span{
+    color:#000000;
+    font:Italic 16px "Trebuchet MS";
+}
+
+#undeFooter .help_close,
+.help_close,
+#undeFooter .accept_del_talon,
+.accept_del_talon,
+#undeFooter .create_med_card,
+.create_med_card,
+#undeFooter .agree_family,
+.agree_family {
+    /*margin-left:167px;*/
+    display: block;
+    width:206px;
+    height:31px;
+    background:url(images/page_wait_zapis.png) center;
+    font:16px Trebuchet MS;
+    text-align:center;
+    color:#ffffff;
+    padding-top:5px;
+    margin: 5px 0 5px 167px;
+    text-decoration: none;
+}
+
+.help_close, .accept_del_talon, .create_med_card, .agree_family {width: 224px;}
+
+#undeFooter .help_close:active,
+.help_close:active,
+#undeFooter .accept_del_talon:active,
+.accept_del_talon:active,
+#undeFooter .create_med_card:active,
+.create_med_card:active,
+#undeFooter .agree_family:active,
+.agree_family:active {
+    background:url(images/page_wait_zapis.png) bottom;
+}
+#undeFooter .help_close:hover,
+.help_close:hover,
+#undeFooter .accept_del_talon:hover,
+.accept_del_talon:hover,
+#undeFooter .create_med_card:hover,
+.create_med_card:hover,
+#undeFooter .agree_family:hover,
+.agree_family:hover {
+    font:16px Trebuchet MS;
+    text-decoration: none;
+    color:#fff;
+}
+#undeFooter .help_close2:hover {
+    font:16px Trebuchet MS;
+    text-decoration: none;
+    color: #B3B3B3;
+}
+
+.enter_exit_button{
+    float:left;
+    display: block;
+    width:249px;
+    height:45px;
+    background:url(images/sprite_wait_button.png) top;
+    font:16px/17px Trebuchet MS;
+    text-align:center;
+    color:#ffffff;
+    padding-top:8px;
+}
+.exit_wait_page {
+    margin-left:12px;
+    background:url(images/sprite_wait_button.png) top;
+}
+
+.exit_wait_page:active {
+    background:url(images/sprite_wait_button.png) bottom;
+}
+
+.enter_wait_page {
+    margin-left:37px;
+    background:url(images/sprite_wait_button.png) center;
+}
+
+.enter_wait_page:active {
+    background:url(images/sprite_wait_button.png) bottom;
+}
+
+#undeFooter .help_close2,
+.help_close2 {
+    float:right;
+    width:90px;
+    margin:-6px -24px 0 0;
+    font:16px Trebuchet MS;
+    color:#b3b3b3;
+    text-decoration: underline;
+    display: block;
+}
+
+.help_close2 img{
+    padding:0 0 0 4px;
+    margin-bottom:-4px;
+}
+.triangle_b {
+    background:url(images/triangle_b.png) no-repeat;
+    width:13px;
+    height:7px;
+    margin:9px 0 0 287px;
+}
+/*НАЧАЛО-------------------------------------------------------------ШАГ 5_list_ogidaniy--------ШАГ 5 _list_ogidaniy------ШАГ 5 _list_ogidaniy*/
+
+.title_list_og{
+    font:26px Trebuchet MS;
+    color:#1b7bcf;
+    padding:30px 0 0 0;
+}
+
+.inf_board_l_b_list_ogidaniy{
+    background:url('images/inf_board.png') left bottom;
+    /*height:60px;*/
+    color:#1b7bcf;
+    margin-left:-12px;
+    padding:0 0 10px 12px;
+}
+
+.div_inside_step4 span{
+    display:block;
+    float: left;
+    color:#53a41e;
+    font:Italic 16px/16px  Trebuchet MS;
+    /*margin-bottom:10px;*/
+
+}
+
+.creat_page_wait{
+    display:block;
+    width:326px;
+    height:31px;
+    background:url(images/page_wait_long.png)top;
+    font:16px Trebuchet MS;
+    text-align:center;
+    color:#ffffff;
+    padding-top:5px;
+}
+
+.creat_page_wait:active{
+    background:url(images/page_wait_long.png)bottom;
+}
+
+.vkladki li.active_step_5 a {
+    background-position:left;
+    color:#1b7bcf;
+}
+
+/*НАЧАЛО-------------------------------------------------------------ШАГ 6_private office--------ШАГ 6 _private office------ШАГ 6 _private office*/
+ul.private_office li.wasActive span{
+    margin: 10px 0 0 34px;
+}
+
+ul.private_office li.active span{
+    margin: 10px 0 0 17px;
+}
+
+.different_talon {
+    font:16px Trebuchet MS;
+    list-style: none;
+    padding:15px 0 0 5px;
+    overflow: hidden;
+}
+
+.different_talon li{
+    float:left;
+    position:relative;
+    padding:0 0 0 20px;
+}
+
+.different_talon li:first-child{
+    padding:0 0 0 0;
+}
+.all_talon a{
+ color:#000000;
+    text-decoration: underline;
+}
+
+.all_talon a:hover,
+.all_talon a.active{
+    background: none;
+    color:#606060;
+    text-decoration: none;
+}
+
+.vidan_talon a{
+    display: none;
+    color:#76ab3b;
+    text-decoration: underline;
+}
+
+.vidan_talon a:hover,
+.vidan_talon a.active {
+    background: none;
+    color:#97bd6c;
+    text-decoration: none;
+}
+
+.predvar_talon a{
+    display: none;
+    color:#1b7bcf;
+    text-decoration: underline;
+}
+
+.predvar_talon a:hover,
+.predvar_talon a.active {
+    background: none;
+    color:#5e9acf;
+    text-decoration: none;
+}
+
+.predlog_talon a{
+    display: none;
+    color:#F1A201;
+    text-decoration: underline;
+}
+
+.predlog_talon a:hover,
+.predlog_talon a.active {
+    background: none;
+    color:#f0b847;
+    text-decoration: none;
+}
+
+.talons_wrapper {
+    position: relative;
+}
+
+.container_talon{
+    width: 5000px;
+    position: relative;
+    overflow: hidden;
+    padding:20px 0 0 0;
+}
+
+#talon_arrow_l{
+    display: none;
+    position:absolute;
+    background: url('images/sprite_arrow.png') top left;
+    width:32px;
+    height:56px;
+    top:106px;
+    left:-50px;
+}
+
+#talon_arrow_l:active{
+    background-position: bottom left;
+}
+
+#talon_arrow_r{
+    display: none;
+    position:absolute;
+    background: url('images/sprite_arrow.png') top right;
+    width:32px;
+    height:56px;
+    top:106px;
+    left:900px;
+}
+
+#talon_arrow_r:active{
+    background-position: bottom right;
+    position:absolute;
+    background: url('images/sprite_arrow.png') bottom right;
+    width:32px;
+    height:56px;
+    top:106px;
+    left:900px;
+}
+
+
+.container_talon > div{
+    float:left;
+}
+
+.talon_width{
+    width:202px;
+    padding-left:25px;
+}
+.talon_width:first-child {
+    padding-left:0;
+}
+
+.talon_pad_left{
+    padding-left:25px;
+}
+
+.top_green_talon, .top_blue_talon, .top_orange_talon {
+    display: table-cell;
+    width: 202px;
+    vertical-align: middle;
+    height:45px;
+    padding: 0 2px;
+    background: url('images/sprite_page_wait.png') no-repeat;
+    font:16px/16px Trebuchet MS;
+    text-align:center;
+    color:#ffffff;
+}
+
+.top_blue_talon {
+    background: url('images/sprite_page_wait.png') no-repeat top center;
+}
+
+.top_orange_talon {
+    background: url('images/sprite_page_wait.png') no-repeat top right;
+}
+
+.middle_talon{
+    background-color: #dcddd3;
+    font:16px Trebuchet MS;
+    color:#000000;
+    height:214px;
+    border-left:1px solid #e9e9e8;
+    border-right:1px solid #e9e9e8;
+}
+
+.middle_talon span{
+    display:block;
+    font:14px Trebuchet MS;
+    color:#868686;
+}
+
+.middle_talon .red{
+    font:18px Trebuchet MS;
+    color:#940000;
+    margin-top:-3px;
+}
+
+.middle_talon .blue{
+    font:14px/14px Trebuchet MS;
+    color:#1b7bcf;
+    margin-top:0;
+}
+
+.cabinet {
+    float:left;
+    width:83px;
+}
+
+.cabinet span{
+    font-size:20px;
+    margin-top:-3px;
+    color:#000000;
+}
+
+.time_priema {
+    float:left;
+}
+
+.time_priema span{
+    display: block;
+    font-size:20px;
+    margin-top:-3px;
+    color:#940000;
+}
+
+.bottom_green_talon{
+    height:112px;
+    background: url('images/sprite_page_wait.png') no-repeat left bottom;
+    position: relative;
+}
+
+.bottom_blue_talon{
+    height:112px;
+    background: url('images/sprite_page_wait.png') no-repeat center bottom;
+    position: relative;
+}
+
+.bottom_orange_talon{
+    height:112px;
+    background: url('images/sprite_page_wait.png') no-repeat right bottom;
+    position: relative;
+}
+
+.bottom_blue_talon a, .bottom_green_talon a, .bottom_orange_talon a{
+    display: block;
+    background: url("images/button_talon.png");
+    width:151px;
+    height:28px;
+    position: absolute;
+    font:16px Trebuchet MS;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.print_talon, .talon_accept {
+    top:20px; left:24px;
+    color:#000000;
+}
+
+.delete_talon{
+    top:66px; left:24px;
+    color:#a50300;
+}
+
+.border_talon_1{
+    padding: 4px 0 8px 10px;
+    border-bottom:1px solid #cccccc;
+    font:16px/19px Trebuchet MS;
+}
+
+.border_talon_2{
+    padding: 5px 0 5px 10px;
+    border-top:1px solid #ffffff;
+    border-bottom:1px solid #cccccc;
+}
+
+.border_talon_3 span{
+    padding: 5px 0 0 10px;
+    border-top:1px solid #ffffff;
+    font:12px/16px Trebuchet MS;
+}
+
+.pad_page_wait{
+    padding-bottom:52px;
+}
+
+.number_talon{
+    text-align: center;
+    font:14px Trebuchet MS;
+    color:#cccccc;
+    padding-top:30px;
+}
+.new{
+    color:#a50300;
+}
+
+/*талончик на печать*/
+.print_talon_text {display: none;}
+.print_talon_text_title {font: bold 20px Arial;}
+.print_talon_text_printdate {font: 12px Arial; font-style: italic;}
+#print_talon_text {
+    display: none;
+}
+
+/*----------------------------------------------------------Авторизация---------*/
+.name_authorization{
+    float:left;
+    width: 135px;
+    font:18px Trebuchet MS;
+    color:#000000;
+    margin:4px 10px 0 0;
+}
+
+.hint{
+    padding:38px 0 0 135px;
+    height:5px;
+    width:165px;
+    font:Italic 14px Trebuchet MS;
+    color:#898989;
+}
+#show_n_polis_img {
+    color:#69A02C;
+    border-bottom: 1px dashed #69A02C;
+}
+#show_n_polis_img:hover {
+    border-bottom: none;
+}
+
+.agree{
+    margin:52px 0 0 330px;
+    border: none;
+    text-align:center;
+    color: #FFFFFF;
+    font: 16px Trebuchet MS;
+    padding: 5px 0 0 0;
+    width: 224px;
+    height: 31px;
+    display: block;
+    background:url('images/page_wait_zapis.png') center;
+    cursor: pointer;
+}
+
+.agree:active{
+    background:url('images/page_wait_zapis.png') bottom;
+}
+
+.authorization, .authorization_family{
+    float:left;
+    width:398px;
+    background:url('images/search.png') no-repeat left;
+    margin:0 0 5px 0;
+    border:none;
+    height:35px;
+    font:16px Trebuchet MS;
+    color:#000000;
+    overflow: hidden;
+    padding:0 0 0 5px;
+}
+
+
+.authorization_a{
+    display: block;
+    width:52px;
+    height:35px;
+    background:url(images/keyboard.png) bottom;
+    float:left;
+    margin-right:42px;
+}
+
+.authorization_a:active{
+    background-position: top;
+}
+
+.authorization_talon{
+    background: url(images/slice_talon.png) 0 -401px;
+    width:339px;
+    height:155px;
+    float:right;
+    padding:8px 0 0 30px;
+    margin:33px -9px 0 0;
+    font:14px/20px Trebuchet MS;
+    color:#53a41e;
+}
+/*--------------------------------------------------*//*--------------------------------------------------*/
+/*-------------------------------------popup_окно_вы записаны------------------------------------------------------*/
+.title_popup_black{
+    font:26px/32px Trebuchet MS;
+    color:#000000;
+    float:left;
+    width:450px;
+    padding-bottom:25px;
+}
+
+.add_marg_popup_2{
+    /* margin:-580px 0 0 210px; */
+}
+
+.inf_board_3 .inf_board2_middle .oldInfBlack{
+    color: #898989;
+    font: 14px/20px Trebuchet MS;
+}
+/*-------------------------------------popup_окно_карта не найдена------------------------------------------------------*/
+.title_popup_red{
+    font:26px/32px Trebuchet MS;
+    color:#ff0000;
+    float:left;
+    width:450px;
+    padding-bottom:18px;
+}
+
+.add_marg_popup{
+    /* margin:-550px 0 0 193px; */
+}
+
+/*-------------------------------------_-------------------------------------------*/
+
+
+
+.page_wait {
+    position:absolute;
+    left:400px;
+    width:224px;
+    height:31px;
+    background:url(images/page_wait_zapis.png) top;
+    font:16px Trebuchet MS;
+    text-align:center;
+    color:#ffffff;
+    padding-top:5px;
+}
+
+.page_wait:active, .page_zapis:active, .help_close:active, .accept_del_talon:active, .create_med_card:active {
+    background:url(images/page_wait_zapis.png) bottom;
+}
+.page_zapis {
+    position:absolute;
+    left:725px;
+    width:224px;
+    height:31px;
+    background:url(images/page_wait_zapis.png) center;
+    font:16px Trebuchet MS;
+    text-align:center;
+    color:#ffffff;
+    padding-top:5px;
+}
+
+#help_buttom{
+    background:url(images/help_bottom.png) 0 0;
+    left:617px;
+    position:absolute;
+    width:62px;
+    height:55px;
+   margin-top:-10px;
+}
+
+#arrow_left {
+    margin-top:-9px;
+   display:block;
+   width:66px;
+   height:57px;
+   background:url(images/arow_bottom.png) 0 0;
+   float:left;
+}
+#arrow_left.active,
+#arrow_left:active {
+   background:url(images/arow_bottom.png) left bottom ;
+}
+
+#arrow_right {
+   margin-top:-9px;
+   display:block;
+   width:66px;
+   height:57px;
+   background:url(images/arow_bottom.png) right top;
+   float:right;
+}
+
+#arrow_right:active {
+   background:url(images/arow_bottom.png) right bottom;
+}
+
+#footer {
+    background-color:#f9f9f8;
+	width: 988px;
+	margin: -95px auto 0;
+	height: 67px;
+	position: relative;
+    padding:28px 18px 0 18px;
+}
+
+.bottom_hr {
+    width:885px;
+    display: block;
+    position:absolute;
+    top:-0px;
+    left:70px;
+    border-top:1px solid #cccccc;
+    border-left:none;
+    border-right:none;
+    border-bottom:1px solid #FFFFFF;
+}
+/* Footer*/
+
+#undeFooter{
+    background-color:#f9f9f8;
+    width: 1024px;
+    margin:0 auto;
+    height: 31px;
+    position: relative;
+    padding:0 0 0 0;
+    font:14px/14px Trebuchet MS;
+}
+
+#undeFooter a{
+    font:14px Trebuchet MS;
+    color:#53a41e;
+    text-decoration: underline;
+    padding:5px 0 0 18px;
+    display:block;
+    width:250px;
+}
+
+#undeFooter a:hover{
+    font:14px Trebuchet MS;
+    color:#f1a101;
+}
+
+
+
+
+#undeFooter hr{
+    width:100%;
+    display: block;
+    position:absolute;
+    top:-0px;
+    border-top:1px solid #cccccc;
+    border-left:none;
+    border-right:none;
+    border-bottom:1px solid #FFFFFF;
+}
+-----------------------------------------------------------------------------*/
+INPUT::-webkit-input-placeholder { color: #898989; }
+TEXTAREA::-webkit-input-placeholder { color: #898989; }
+.m-placeholder { color: #898989; }
+
+/*-------------------------------------------------------------------------------------Вторая новая половина страницы 29_02_2012----------------------------------------------*/
+.part_2{
+    background: url(images/shadow_part_2.png) no-repeat top center #f9f9f8;
+    width: 884px;
+    margin:0 auto;
+    padding:0 70px 40px 70px;
+    font:14px/14px Trebuchet MS;
+}
+
+.part_2 hr{
+    width:1024px;
+    margin-left:-70px;
+    padding:0;
+    border-top:1px solid #cccccc;
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+}
+
+.part_2 h1{
+    color:#e98d01;
+    font:24px Trebuchet MS;
+}
+
+.news_list a{
+    display: block;
+    color:#000000;
+    font:20px Trebuchet MS;
+    margin-top:35px;
+    text-decoration: underline;
+}
+
+.news_list a:hover{
+    color:#474747;
+}
+
+
+.news_date{
+    position: relative;
+    color:#6ea530;
+    font:14px/35px Trebuchet MS;
+}
+
+.news_date_twiter{
+    background:url('images/twiter.png') no-repeat 0 35px;
+    margin-left: -40px;
+    padding: 25px 0 0 40px;
+    color:#6ea530;
+    font:14px/35px Trebuchet MS;
+}
+
+.news_short{
+    color:#000000;
+    font:14px Trebuchet MS;
+}
+
+.news_list{
+    padding:50px 90px 0 0;
+    width:490px;
+    float: left;
+}
+
+.news_list .arhiv{
+    color:#e98d01;
+    font:14px Trebuchet MS;
+    margin-top:25px;
+}
+
+.news_list  .arhiv:hover{
+    color:#6ea530;
+}
+
+.partners_list{
+    padding-top:50px;
+}
+
+.partners_list a{
+    color:#6ea530;
+    text-decoration: underline;
+}
+
+.partners_list a:hover{
+    color:#e98d01;
+}
+
+.partners_list div{
+    padding-bottom: 20px;
+    font:14px Trebuchet MS
+}
+
+/*----Поле ввода в обратной связи---------------------------------------------------------------------------------Обратная связь----------------------------------------------*/
+.input_name{
+    font:16px/16px Trebuchet MS;
+    color:#606060;
+    text-align: right;
+    padding: 0 17px 4px 35px;
+}
+
+.input_obr_sv{
+    float:left;
+    display: inline;
+    margin:7px 0 7px 0;
+}
+
+.input_l_t{
+    background:url('images/input.png') left top;
+    padding-left:5px;
+}
+
+.input_r_t{
+    background:url('images/input.png') right top;
+    padding-top:5px;
+}
+
+.input_r_b{
+    background:url('images/input.png') right bottom;
+    padding-right:5px;
+}
+
+.input_l_b{
+    background:url('images/input.png') left bottom;
+    margin-left:-5px;
+    padding:0 0 5px 5px;
+    height:25px;
+}
+
+.input_obr_proper{
+    width:275px;
+    border:none;
+    font:16px Trebuchet MS;
+    color:#000000;
+    overflow: hidden;
+    -webkit-appearance: none;
+}
+
+.input_obr_proper_big{
+    width:630px;
+    overflow-y: scroll;
+    resize: none;
+
+}
+
+/*--Выпадающий список в обратной связи----------------------------*/
+/* select style */
+.sel_wrap{
+    position:absolute;
+    display: inline-block;
+    margin: -4px 0 0;
+}
+
+.sel_wrap select{
+    display:none;
+}
+
+.sel_imul{
+    width:635px;
+}
+
+.sel_imul .sel_selected{
+    background:#fff;
+    padding:4px 1px;
+    font:16px "Trebuchet MS";
+    color:#000000;
+    cursor:pointer;
+    position:relative;
+    height:23px;
+}
+
+.sel_selected .sel_arraw{
+    height:33px;
+    width:35px;
+    background:url(images/select.png) top no-repeat;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.sel_imul:hover .sel_selected .sel_arraw{
+    background:url(images/select.png) bottom;
+}
+
+.sel_imul .sel_options{
+    background:#fff;
+    border:1px solid #cccccc;
+    overflow:auto;
+    position:absolute;
+    width:628px;
+    max-height: 200px;
+    display:none;
+    z-index:10;
+}
+
+.sel_options .sel_option{
+    padding:3px 4px;
+    font:16px "Trebuchet MS";
+    color:#000000;
+    border-top:1px solid #fff;
+    border-right:none;
+    border-left:none;
+}
+
+.sel_options .sel_option:hover{
+    border-color:#dbdbdb;
+    background:#dbdbdb;
+    cursor:pointer;
+}
+
+/*--Обратная связь форма вопроса------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.title_obr_sv{
+    font:26px Trebuchet MS;
+    color:#e98d01;
+    padding:10px 0 0 0;
+}
+
+.obr_sv{
+    width:957px;
+    margin:10px 0 0 -37px;
+}
+
+.obr_sv_l_t{
+    background: url(images/obr_sv.png) top left;
+    padding-left: 30px;
+}
+
+.obr_sv_r_t{
+    background: url(images/obr_sv.png) top right;
+    padding-top: 30px;
+}
+
+.obr_sv_r_b{
+    background: url(images/obr_sv.png) bottom right;
+    padding-right: 30px;
+}
+
+.obr_sv_l_b{
+    background: url(images/obr_sv.png) bottom left;
+    padding: 0 0 30px 13px;
+    margin-left: -30px;
+    position:relative;
+}
+
+.obr_sv_triangle{
+    background: url(images/obr_sv_triangle.png) no-repeat;
+    height:19px;
+    width:42px;
+    position:absolute;
+    top:413px;
+    left:826px;
+}
+
+.obr_sv_otpravit{
+    background: url(images/obr_sv_otpravit.png) 0 -34px;
+    display: block;
+    width:112px;
+    height:26px;
+    color: #FFFFFF;
+    font: 16px/16px Trebuchet MS;
+    text-align: center;
+    float:right;
+    padding-top: 8px;
+    margin: 13px 15px 0 0;
+}
+
+.obr_sv_otpravit:hover{
+    background-position: 0 0;
+}
+/*-Обратная связь вопрос/ответ------------------------------------------------------------------------------------------------------------------------------*/
+.obr_sv_small{
+    width:830px;
+    margin:0 -10px 0 0;
+    float:right;
+    position:relative;
+}
+
+.obr_sv_small_l_t{
+    background: url(images/obr_sv_small.png) top left;
+    padding-left: 23px;
+}
+
+.obr_sv_small_r_t{
+    background: url(images/obr_sv_small.png) top right;
+    padding-top: 23px;
+}
+
+.obr_sv_small_r_b{
+    background: url(images/obr_sv_small.png) bottom right;
+    padding-right: 23px;
+}
+
+.obr_sv_small_l_b{
+    background: url(images/obr_sv_small.png) bottom left;
+    padding: 2px 0 20px 25px;
+    min-height:56px;
+    margin-left: -23px;
+}
+
+.obr_sv_small_triangle{
+    background: url(images/obr_sv_triangle_90.png) no-repeat;
+    height:23px;
+    width:16px;
+    z-index:1;
+    top:23px;
+    left:-3px;
+    position: absolute;
+}
+
+.obr_sv_small_border_b{
+    border-bottom: 1px solid #cccccc;
+    width:910px;
+    margin-top: -5px;
+}
+
+.obr_sv_small_border_t{
+    border-top: 1px solid #ffffff;
+    width:910px;
+}
+
+.obr_sv_small_right{
+    font: 11px/14px Trebuchet MS;
+    margin: 5px 0 5px 0;
+    width:90px;
+    float:left;
+    text-align: center;
+}
+
+.obr_sv_question{
+    background: url(images/icon_q_a.png) no-repeat top;
+    height: 29px;
+    width: 28px;
+    margin: 20px 0 0 30px;
+}
+
+.obr_sv_answer{
+    background: url(images/icon_q_a.png) no-repeat bottom;
+    height: 29px;
+    width: 28px;
+    margin: 20px 0 0 30px;
+}
+
+.obr_sv_q_title{
+    color:#efa932;
+    font: bold 16px/16px Trebuchet MS;
+    margin-bottom: 5px;
+}
+
+.obr_sv_a_title{
+    color:#7ebb56;
+    font: bold 16px/16px Trebuchet MS;
+    margin-bottom: 5px;
+}
+
+.obr_sv_q_grey{
+    color:#606060;
+    font: italic 12px/12px Trebuchet MS;
+    padding-top:5px;
+
+}
+
+/*-листание страниц в обратной связи------------------------------------------------------------------------------------------------------------------------------*/
+
+.page_choose{
+    color:#606060;
+    font: 16px Trebuchet MS;
+    padding-top: 50px;
+    margin-left: -9px;
+}
+
+.page_choose div{
+    float:left;
+    padding: 0 211px 0 9px;
+}
+
+.page_choose a{
+    height:20px;
+    width:19px;
+    color:#606060;
+    font: 16px Trebuchet MS;
+    display: block;
+    float:left;
+    text-decoration: underline;
+    margin-right:5px;
+    text-align: center;
+}
+
+.page_choose a:hover {
+    background: url(images/page_bg.png);
+    color:#ffffff;
+    margin-right:5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.page_choose .activ_page {
+    background: url(images/page_bg.png);
+    height:20px;
+    width:19px;
+    color:#ffffff;
+    margin-right:5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.page_choose .no_num_page{
+    width:60px;
+    color:#606060;
+    font: 16px Trebuchet MS;
+    display: block;
+    float:left;
+    text-decoration: underline;
+    margin-right:5px;
+    text-align: center;
+}
+
+.page_choose .no_num_page:hover{
+    width:60px;
+    background: none;
+    color:#c0c0c0;
+    text-decoration: underline;
+    margin-right:5px;
+    text-align: center;
+}
+
+
+INPUT::-webkit-input-placeholder { color: #898989; }
+TEXTAREA::-webkit-input-placeholder { color: #898989; }
+.m-placeholder { color: #898989; }
+
+
+.obr_sv_search{
+    background: url(images/obr_sv_otpravit.png) 0 -102px;
+    display: block;
+    width:112px;
+    height:25px;
+    color: #FFFFFF;
+    font: 16px/16px Trebuchet MS;
+    text-align: center;
+    float:left;
+    padding-top:8px;
+    margin:16px 15px 0 21px;
+}
+
+.obr_sv_search:hover{
+    background-position: 0 -68px ;
+}
+
+/* Календарь */
+.cld_month, .cld_time {
+    border-collapse: collapse;
+    font: bold 16px/1 'Trebuchet MS';
+}
+.cld_month {
+    float: left;
+    margin-right: 1px;
+}
+.cld_month td, .cld_time td {
+    width: 55px;
+    height: 35px;
+    background: url(images/cld_td_bg_gray.png) repeat-x;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+.cld_time td {
+    line-height: 1.5;
+}
+.cld_month td sup, .cld_time td sup {
+    font-size: 11px;
+}
+.cld_month td.selected, .cld_time td.selected {
+    background: #b4db4c;
+    border: 1px solid #a7ca49;
+}
+.cld_month td.selected.first, .cld_time td.selected.first {
+    background: #b4db4c url(images/waiting_list_first_last_days.png) no-repeat -11px 0;
+}
+.cld_month td.selected.last, .cld_time td.selected.last {
+    background: #b4db4c url(images/waiting_list_first_last_days.png) no-repeat 44px 0;
+}
+.cld_month th {
+    height: 35px;
+    background: url(images/cld_white_point.gif) repeat-x;
+    border-top: 1px solid #ccc;
+    font: normal 14px/1 'Trebuchet MS';
+}
+.cld_month th:first-child {border-left: 1px solid #ccc;}
+.cld_month th:last-child {border-right: 1px solid #ccc;}
+.cld_month th.cld_montitle {
+    background: none;
+    font: bold 16px/1 'Trebuchet MS';
+    border: 0;
+}
+.cld_lightmarked, .cld_darkmarked {
+    color: #ca0025;
+}
+.cld_today {
+    color: #898989;
+}
+
+#shadow {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: -50%;
+    z-index: 1;
+}
+#shadow.active {
+    display: block;
+}
+
+
+/* *** *** Клавиатура *** *** */
+
+#keyboard{
+    height: 332px;
+    position: fixed;
+    left: 50%;
+    margin-left: -512px;
+    bottom: -335px;
+    background:url('images/bg_keyboard.png') repeat-x;
+    padding-top:3px;
+    min-width:1024px;
+}
+
+#keyboard a.uppercase {
+    text-transform: uppercase;
+}
+
+#keyboard a{
+    display: block;
+    float:left;
+    margin:7px 0 0 10px;
+}
+
+#keyboard a span {
+    display: block;
+    float:left;
+}
+
+/*------------------не нажатая кнопка--------------*/
+.button_left{
+    background:url('images/button_left.png') no-repeat;
+    width:5px;
+    height: 57px;
+}
+
+.button_center_small{
+    background:url('images/button_center.png') repeat-x;
+    height: 43px;
+    width:41px;
+    text-align: center;
+    font: 24px  Trebuchet MS;
+    color:black;
+    padding-top: 14px;
+}
+
+.button_center{
+    background:url('images/button_center.png') repeat-x;
+    height: 43px;
+    text-align: center;
+    font: 18px  Trebuchet MS;
+    color:black;
+    padding-top: 14px;
+}
+
+.button_right{
+    background:url('images/button_right.png') no-repeat;
+    width:5px;
+    height: 57px;
+}
+
+
+/*------------------нажатая кнопка--------------*/
+#keyboard a.active_kb_but .button_left{
+    background:url('images/button_left_active.png') no-repeat;
+    width:5px;
+    height: 57px;
+}
+
+#keyboard a.active_kb_but .button_center_small{
+    background:url('images/button_center_active.png') repeat-x;
+    height: 43px;
+    width:41px;
+    padding-top: 14px;
+    text-align: center;
+    font: 24px  Trebuchet MS;
+    color:black;
+}
+
+#keyboard a.active_kb_but .button_center{
+    background:url('images/button_center_active.png') repeat-x;
+    height: 43px;
+    padding-top: 14px;
+    text-align: center;
+    font: 18px  Trebuchet MS;
+    color:black;
+}
+
+#keyboard a.active_kb_but .button_right{
+    background:url('images/button_right_active.png') no-repeat;
+    width:5px;
+    height: 57px;
+}
+
+/*------------------зеленая кнопка - активная Звглавные--------------*/
+#keyboard a.active_kb_but_green .button_left{
+    background:url('images/button_left_green.png') no-repeat;
+    width:5px;
+    height: 57px;
+}
+
+#keyboard a.active_kb_but_green .button_center{
+    background:url('images/button_center_green.png') repeat-x;
+    height: 43px;
+    text-align: center;
+    font: 18px  Trebuchet MS;
+    color:#fff;
+    padding-top: 14px;
+}
+
+#keyboard a.active_kb_but_green .button_right{
+    background:url('images/button_right_green.png') no-repeat;
+    width:5px;
+    height: 57px;
+}
+
+
+/*----------------иконки кнопок----------*/
+
+#keyboard a.active_kb_but .backspace{
+    background:url('images/slider_keyboard.png') 0 -185px no-repeat;
+    width:16px;
+    height:11px;
+    margin:10px 0 0 15px;
+}
+
+.backspace{
+    background:url('images/slider_keyboard.png') 0 -69px no-repeat;
+    width:16px;
+    height:11px;
+    margin:10px 0 0 15px;
+}
+
+#keyboard a.active_kb_but .shift{
+    background:url('images/slider_keyboard.png') 0 -167px no-repeat;
+    width:20px;
+    height:18px;
+    margin:6px 0 0 9px;
+}
+
+.shift{
+    background:url('images/slider_keyboard.png') 0 -27px no-repeat;
+    width:20px;
+    height:18px;
+    margin:6px 0 0 9px;
+}
+
+#keyboard a.active_kb_but .shift_right{
+    background:url('images/slider_keyboard.png') 0 -167px no-repeat;
+    width:20px;
+    height:18px;
+    margin:6px 9px  0 0;
+    float:right;
+}
+
+#keyboard a span .shift_right{
+    background:url('images/slider_keyboard.png') 0 -27px no-repeat;
+    width:20px;
+    height:18px;
+    margin:6px 9px  0 0;
+    float:right;
+}
+
+.caps_lock
+{
+    background:url('images/slider_keyboard.png') 0 -80px no-repeat;
+    width:20px;
+    height:23px;
+    margin:3px 0 0 9px;
+}
+
+#keyboard a.active_kb_but_green .caps_lock{
+    background:url('images/slider_keyboard.png') 0 -103px no-repeat;
+    width:20px;
+    height:23px;
+    margin:3px 0 0 9px;
+}
+
+.tyda{
+    background:url('images/slider_keyboard.png') 0 -45px no-repeat;
+    width:14px;
+    height:12px;
+    margin:10px 0 0 22px;
+}
+
+.syda{
+    background:url('images/slider_keyboard.png') 0 -57px no-repeat;
+    width:14px;
+    height:12px;
+    margin:10px 0 0 26px;
+}
+
+#keyboard a.active_kb_but .close_kb{
+    background:url('images/slider_keyboard.png') 0 -196px no-repeat;
+    width:26px;
+    height:27px;
+    margin:0 0 0 9px;
+}
+
+.close_kb {
+    background:url('images/slider_keyboard.png') 0 0  no-repeat;
+    width:26px;
+    height:27px;
+    margin:0 0 0 9px;
+}
+
+/*----------------------------МАЛЕНЬКАЯ КЛАВИАТУРА-----------------------------------------*/
+
+#keyboard_digital {
+    height: 300px;
+    width: 275px;
+    position: fixed;
+    right: -275px;
+    top: 50%;
+    margin-top: -150px;
+}
+
+#keyboard_digital a span {
+    display: block;
+    float:left;
+}
+
+#keyboard_digital .small_kb a {
+    display: block;
+    float: left;
+    margin: 9px 10px 0 0;
+}
+
+#keyboard_digital .small_kb .small_kb_center2 a {
+    margin: 0;
+    float: right;
+}
+
+/*фон*/
+.small_kb_top{
+    background: url('images/small_kb_top.png');
+    width:18px;
+    height:10px;
+}
+
+.small_kb_left{
+    background: url('images/small_kb_slice_left.png') repeat-x;
+    height:280px;
+}
+
+.small_kb_bottom{
+    background: url('images/small_kb_bottom.png');
+    height:10px;
+}
+
+#small_kb_center{
+    background: url('images/small_kb_slice_center.png') repeat-x;
+    width:214px;
+    height:288px;
+    vertical-align: top;
+    padding-top: 12px;
+}
+
+.small_kb_center2{
+    background: url('images/small_kb_slice_center.png') repeat-x;
+    width:42px;
+    height:288px;
+    vertical-align: middle;
+}
+
+/*------------------нажатая кнопка--------------*/
+#keyboard_digital a.active_kb_but .button_left{
+    background:url('images/button_left_active.png') no-repeat;
+    width:5px;
+    height: 57px;
+}
+
+.button_left{
+    background:url('images/button_left.png') no-repeat;
+    width:5px;
+    height: 57px;
+}
+
+/*#keyboard_digital a.active_kb_but .button_center_small{*/
+    /*background:url('images/button_center_active.png') repeat-x;*/
+    /*height: 43px;*/
+    /*width:41px;*/
+    /*padding-top: 14px;*/
+    /*text-align: center;*/
+    /*font: 24px  Trebuchet MS;*/
+    /*color:black;*/
+/*}*/
+
+/*#keyboard_digital a.active_kb_but .button_center{*/
+    /*background:url('images/button_center_active.png') repeat-x;*/
+    /*height: 43px;*/
+    /*padding-top: 14px;*/
+    /*text-align: center;*/
+    /*font: 18px  Trebuchet MS;*/
+    /*color:black;*/
+/*}*/
+
+#keyboard_digital a.active_kb_but .button_right{
+    background:url('images/button_right_active.png') no-repeat;
+    width:5px;
+    height: 57px;
+}
+
+/*центр кнопки активной*/
+.button_center_extra_small{
+    background:url('images/button_center.png') repeat-x;
+    height: 43px;
+    width:47px;
+    text-align: center;
+    font: 24px  Trebuchet MS;
+    color:black;
+    padding-top: 14px;
+}
+
+#small_kb_center a.active_kb_but .button_center_extra_small{
+    background:url('images/button_center_active.png') repeat-x;
+    height: 43px;
+    width:47px;
+    text-align: center;
+    font: 24px  Trebuchet MS;
+    color:black;
+    padding-top: 14px;
+}
+
+
+/*кнопка закрыть неактивная*/
+.button_left_close{
+    background:url('images/close_kb_l.png') no-repeat;
+    width:5px;
+    height: 45px;
+}
+
+ .button_center_close{
+    background:url('images/close_kb_slice.png') repeat-x;
+    height:45px;
+    width:34px;
+    padding-top: 10px;
+    float:right;
+}
+
+/*кнопка закрыть активная*/
+.small_kb_center2 a.active_kb_but .button_left_close{
+    background:url('images/close_kb_l_act.png') no-repeat;
+    width:5px;
+    height: 45px;
+}
+
+.small_kb_center2 a.active_kb_but .button_center_close{
+    background:url('images/close_kb_center_act.png') repeat-x;
+    height:45px;
+    width:34px;
+    padding-top: 10px;
+    float:right;
+}
+
+
+
+/*----------------иконки кнопок для маленькой клавы----------*/
+
+.backspace_small_kb{
+    background:url('images/slider_keyboard.png') 0 -126px no-repeat;
+    width:24px;
+    height:15px;
+    margin:7px 0 0 10px;
+}
+
+#keyboard_digital  a .close_small_kb{
+    background:url('images/slider_keyboard.png') 0 -141px no-repeat;
+    width:34px;
+    height:26px;
+    margin:0 0 0 0;
+    float:right;
+}
+
+
+/** BANNERS **/
+
+.banners {
+    margin: 33px -70px 0 -70px;
+    border-bottom: 1px solid #fff;
+}
+.banners table {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid #ccc;
+}
+.banners table td {
+    /*width: 25%;*/
+    text-align: center;
+    padding: 0 0 26px;
+}
+.banners a {
+    display: inline-block;
+    height: 58px;
+    overflow: hidden;
+}
+.banners a:hover {
+    background-position: 0 -58px;
+}
+.banners a img {
+    visibility: hidden;
+}
+
+/** BANNERS_NEW **/
+
+.banners_new {
+    margin: 33px -70px 0 -70px;
+    border-bottom: 1px solid #fff;
+}
+.banners_new_wrap {
+    padding: 0 25px;
+    border-bottom: 1px solid #ccc;
+}
+.banners_new table {
+    width: 100%;
+    border-collapse: collapse;
+    /*margin: 0 25px;*/
+}
+.banners_new table td {
+    text-align: center;
+    padding: 0 0 16px;
+}
+
+
+/** GREEN BIT BUTTON **/
+.green_big_button {
+    display: inline-block;
+    font: 16px/1 Trebuchet MS;
+    color: #fff;
+    padding: 0 0 0 20px;
+    background: url('images/green_big_button.png') no-repeat left 0;
+}
+.green_big_button span {
+    display: block;
+    padding: 8px 20px 11px 0;
+    text-align: center;
+    background: url('images/green_big_button.png') no-repeat right 0;
+}
+.green_big_button:active {
+    background: url('images/green_big_button.png') no-repeat left -35px;
+}
+.green_big_button:active span {
+    background: url('images/green_big_button.png') no-repeat right -35px;
+}
+
+#oldBrowserMessage {
+    display:none;
+    width: 1024px;
+    margin: 0 auto;
+    background: #FFDD00;
+    color: red;
+    padding: 10px 0;
+}
+#oldBrowserMessage a {
+    color: #53A41E;
+    font: bold 16px/1 'Trebuchet MS';
+}
+
+.footer_phones_wrap {
+    /*display: none;*/
+    width: 1024px;
+    margin: 0 auto;
+    background: #f9f9f8;
+    border-top: 1px solid #cccccc;
+}
+.footer_phones {
+    padding: 15px 70px 23px 70px;
+    border-top: 1px solid #ffffff;
+    font: 14px/1 'Trebuchet MS';
+    overflow: hidden;
+}
+.spliter {
+    float: left;
+    width: 130px;
+}
+.footer_phones a,
+.display_rooms {
+    color: #69a02c;
+    text-decoration: underline;
+}
+.footer_phones a:hover,
+.display_rooms:hover {
+    text-decoration: none;
+}
+.footer_phones__phone {
+    position: relative;
+    float: left;
+    width: 200px;
+    padding-left: 32px;
+    background: url(images/footer_phone_icon.png) 0 0 no-repeat;
+    font-size: 18px;
+}
+.footer_phones__phone__qr {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -100px;
+}
+
+.footer_phones__phone__description {
+    color: #606060;
+    font-size: 12px;
+}
+
+/*------------------new design at 20.06.13--------------*/
+
+.explanationMinePages{
+
+    height: 50px;
+    width: 820px !important;
+    position: relative;
+    float: left;
+    padding: 15px 29px 13px 29px;
+    margin: 30px 0px 75px 0px;
+     -moz-box-shadow: 0 0 9px rgba(0,0,0,0.2); /* Для Firefox */
+    -webkit-box-shadow: 0 0 9px rgba(0,0,0,0.2); /* Для Safari и Chrome */
+    box-shadow: 0 0 9px rgba(0,0,0,0.2); /* Параметры тени */
+    border-radius:6px;
+}
+    .explanationMinePages p{
+        height: 40px;
+        padding: 0px;
+        padding-top: 18px;
+        display: block;
+        position: absolute;
+        top: 76px;
+        left: 570px;
+        background-image: url(./images/str-bot_03.png);
+        background-repeat: no-repeat;
+        background-position: top right 40px;
+
+
+    }
+.containerBigButton{ position: relative; }
+.containerBigButton a div{
+    width: 90px;
+    height: 90px;
+    top: 0px;
+    float: left;
+    border-right: 1px #bfe48d solid;
+    background-repeat: no-repeat;
+    background-position: top 25px left 27px;
+    position: absolute;
+    background-image: url(./images/btn-ico2.png);
+   
+
+
+}
+.containerBigButton a:nth-child(odd) div{ background-image: url(./images/btn-ico3.png); }
+.containerBigButton a:last-child div{ background-image: url(./images/btn-ico4.png); }
+.containerBigButton a:first-child div{ background-image: url(./images/btn-ico1.png); }
+.verticalLine2{ height: 530px;}
+
+/*Вызов врача*/
+
+.b-call{
+     float: left;
+     border-bottom: 1px solid #CBCBCB;
+     min-height: 100px;
+     width: 100%;
+     margin-top: 30px;
+}
+    .b-call .b-call-1, .b-call .b-call-2{
+        float: left;
+        padding-left: 200px;
+        width: 684px;
+        line-height: 27px;
+        margin-bottom: 12px;
+        
+    }
+        .b-call .b-call-1 font{ font-size: 15px;}
+        .b-call .b-call-1 textarea{ 
+            float: right; 
+            width: 488px; 
+            margin-right: 105px;
+            min-height: 66px; 
+            border-radius: 5px;
+            padding: 8px;
+            border: 1px solid #CBCBCB;
+
+        }
+    .b-call .b-call-2{ padding-left: 130px; width: 649px; }
+        .b-call .b-call-2 .b-call-2a{
+            float: right;
+            width: 506px;
+            position: relative;
+        }
+
+
+        .b-call-2a .b-memo, .b6-call .b-memo{
+                        position: absolute;
+                        top: 3px;
+                        right: -80px;
+                        min-width: 59px;
+
+                        
+                        
+                    }
+                     
+                        .b-call-2a .b-memo div, .b6-call .b-memo div{
+                            float: left;
+                            height: 28px;
+                            width: 30px;
+                            padding: 4px 3px 3px 3px;
+                            text-align: center;
+                            vertical-align: middle;
+                            box-shadow: 0px 0px 10px 0px #666;
+                            border-radius: 5px 5px 5px 5px;
+                            position: relative;
+                            background-color: #FFF;
+                            font-size: 25px;
+      
+                            color: green;
+                        }
+
+                         .b-call-2a .b-memo div span, .b6-call .b-memo div span{
+                            display: block;
+                            float: left;
+                            width: 12px;
+                            height: 11px;
+                            position: absolute;
+                            top: 14px;
+                            left: -12px;
+                            background-image: url(images/fon-memo-str.png);
+                            
+                        }
+            .b-call-2 .b-call-2a input{ float: left; width: 50px; }
+                .b-call-2a .b-call-2a1{ 
+                    float: right !important; 
+                    height: 30px;
+                    padding-top: 35px; 
+                    padding-right: 10px;
+                    padding-left: 3px;
+                    width: 371px !important; 
+                    background-image: url(images/gradusfon.png);
+                    background-repeat: no-repeat;
+                    position: relative;
+                    
+                }
+                    .b-call-2a1 .b-thermometer{ 
+                        position: absolute;
+                
+                        background-image: url(images/str-gradus_31.png);
+                        background-repeat: no-repeat;
+                        width: 11px;
+                        height: 31px;
+                        top: 35px;
+                        left: 100px;
+                        cursor: move;
+                    }
+
+                    
+
+
+                       
+
+                        .b-thermometer p{ position: relative; }
+
+                        .b-thermometer p span{ 
+                            position: absolute;
+                            display: none;
+                            width: 200px;
+                            height: 20px;
+                            left:-220px;
+                            top: 8px;
+                            font-size: 11px;
+                            color: #53a41e;
+                        }
+
+        #b-sel{
+            height: 33px;
+            border: 1px solid #cdcdcd;
+            border-radius: 6px;
+            font-size: 16px;
+            padding: 0px 6px 0px 5px;
+            margin-top: 6px;
+        }
+        .b-call-2 font{ line-height: 46px; font-size: 15px; }
+
+
+        /* болки input*/
+
+        .b2-call{ padding-top: 30px; padding-bottom: 13px; float: left; border-bottom: 1px solid #CBCBCB; padding-right: 105px; }
+        
+        .b2-call div{ margin-bottom: 17px; float: right; }
+            
+            .b2-call div font{ display: table; float: right; font-size: 15px; margin-top: 6px; }
+            
+            .b2-call div input{ 
+            margin-left: 11px;
+            height: 33px;
+            border: 1px solid #cdcdcd;
+            border-radius: 6px;
+            font-size: 16px;
+            padding: 0px 6px 0px 5px;
+            width: 493px;
+            display: block;
+            float: right;
+            }
+            .b3-call{ margin-bottom: 0px !important; padding-bottom: 0px !important; border: none !important; }
+             .b-sel{ width: auto; float: left; margin-left: 155px;}
+             
+             .b-sel font{ float: left; margin-right: 10px; font-size: 15px; margin-top: 6px;}
+             .b4-call{ padding-top: 12px !important; }
+             .b-tel input{ width: 462px !important;}
+  
+    
+     .dayBirth font{
+            margin-left: 90px !important;
+
+        }
+/*плагин селекта*/
+
+
+.cusel,
+.cuselFrameRight,
+.jScrollPaneDrag,
+.jScrollArrowUp,
+.jScrollArrowDown {
+    background: url(images/selects-22.png) no-repeat;
+}
+.cusel { /* общий вид селекта включая стрелку справа */
+    height: 18px;
+    background-position: left top;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 11px;
+}
+.cuselFrameRight { /* левая чсть селект. обыно скругление и левая граница */
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 42px;
+    background-position: right top;
+}
+
+.cuselText { /* контейнер для отображенного текста селект */
+    height: 12px;
+    padding: 1px 0 0 5px; /* подбираем отступы и высоту для видимого текста в селекте */
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    font: 11px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif; /* шрифты */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+* html .cuselText { /* высота блока для текста для ие6 */
+    height: 22px;
+}
+.cusel span { /* оформление оптиона */
+    display: block;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 2px 15px 2px 5px; /* паддинг справа - это отступ текста от ползунка */
+    zoom: 1;
+}
+.cusel span:hover,
+.cusel .cuselOptHover { /* реакция оптиона на наведение */
+    background: #003399;
+    color: #fff;
+}
+.cusel .cuselActive { /* оформление активного оптиона в списке */
+    background: #CC0000;
+    color: #fff;
+    cursor: default;
+}
+
+/*
+    styles for focus and hover
+*/
+.cusel:hover,
+.cusel:hover .cuselFrameRight,
+.cusel:focus,
+.cusel:focus .cuselFrameRight,
+.cuselFocus,
+.cuselFocus .cuselFrameRight {
+    background-image: url(images/selects-focus.png);
+}
+
+/*
+    styles for disabled select
+*/
+.classDisCusel,
+.classDisCusel .cuselFrameRight {
+    background-image: url(images/selects-2-dis.png) !important;
+    cursor: default;
+    color: #ccc;
+}
+.classDisCusel .cuselText {
+    cursor: default;
+}
+
+
+/*
+    styles for scrollbar
+*/
+.cusel-scroll-wrap { /* контейнер для блока с прокруткой */
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #fff; /* фон выпадающего списка */
+    min-width: 100%;
+    width: 100px;
+}
+.cusel .jScrollPaneContainer {
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    border: 1px solid  #999; /* границы выпадающего спиcка */
+}
+
+.cusel .jScrollPaneTrack { /* трек для ползунка прокрутки */
+    height: 100%;
+    width: 7px !important;
+    background: #ccc;
+    position: absolute;
+    top: 0;
+    right: 4px;
+}
+.cusel .jScrollPaneDrag { /* ползунок */
+    position: absolute;
+    background-position: -40px -19px;
+    cursor: pointer;
+    width: 15px !important;
+    height: 27px !important;
+    right: -4px;
+    
+}
+
+.cusel .jScrollPaneDragTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.cusel .jScrollPaneDragBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+.cusel .jScrollArrowUp { /* стрелка вверх */
+    position: absolute;
+    top: 0;
+    right: 2px;
+    width: 26px;
+    height: 12px;
+    cursor: pointer;
+    background-position: -3px -19px;
+    overflow: hidden;
+}
+.cusel .jScrollArrowDown { /* стрелка вниз */
+    width: 25px;
+    height: 12px;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    right: 3px;
+    cursor: pointer;
+    background-position: -21px -19px;
+    overflow: hidden;
+}
+
+
+    .cusel-scroll-wrap{ border: 1px solid #947; overflow: hidden;}
+    .cuselScrollArrows{ border: none; height: 35px !important; min-width: 150px !important; font-size: 15px; }
+    .cuselText{ font-size: 16px; height: 100%; padding-top: 8px; padding-left: 5px;}
+/*end плагин*/
+
+/*стили чекбокса*/
+.niceCheck {
+width: 22px;
+height: 20px;
+display: inline-block;
+cursor: pointer;
+background: url(images/checkbox-dsprite.png);
+margin-bottom: -4px;
+}
+.niceCheck input {
+display: none;
+}
+   /*end*/  
+
+        .b-down{
+            float: left;
+            font-size: 15px !important;
+            line-height: 22px;
+            margin-left: 249px;
+            margin-top: 25px;
+
+        }
+        .b-down div:first-child{ float: left; display: table; width: 730px; margin-bottom: 10px;}
+        .b-down div:last-child{ float: left; display: table; }
+        .b-down div:last-child  a{ font-style: italic; color: #53a41e; text-decoration: underline; }
+        
+        .b5-call{ 
+            width: 100%; 
+            padding: 0px; 
+            border: 0px; 
+            border-top: 1px solid #cdcdcd; 
+            margin-top: 35px; 
+            text-align: center; 
+            padding-top: 33px;
+        } 
+            .b5-call input{ 
+                background-image: url(images/b-fon-btn_03.png); 
+                background-repeat: repeat-x; 
+                width: 224px; 
+                height: 35px; 
+                border: none;
+                border-radius: 6px; 
+                color: #FFF;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        
+            .b6-call{
+                margin-bottom: 33px;
+                padding: 0px;
+                width: 880px;
+                padding-bottom: 40px;
+                margin-top: 30px;
+            }
+                .b6-call span:first-child{
+                    float: left;
+                    width: 490px;
+                    display: block;
+                    font-size: 15px;
+                }
+                    .b6-call span:first-child h1{ font-size: 26px;}
+                .b6-call span:last-child{
+                    display: block;
+                    float: right;
+                    border-radius: 6px;
+                    background-color: #eeefe8;
+                    border: 1px solid #cdcdcd;
+                    width: 319px;
+                    height: 34px;
+                    padding: 9px 13px 13px 13px;
+                    font-size: 14px;
+                    color: #968989;
+
+                }
+
+
+   /*Личный кабинет*/
+
+   .b6-call{ padding-bottom: 53px !important;  margin-bottom: 0px !important; }
+   .b6-call span{ position: relative; }
+   .b6-call span .b-memo{ left: 374px !important; top: 37px !important; }
+   .b6-call span .b-memo div span {
+    padding: 0px !important;
+    border: none !important;
+    border-radius: 0px !important;
+    top: 12px !important;
+    box-shadow: none;
+    background: none;
+    background-image: url(images/fon-memo-str.png);
+    }
+    .b6-call span .b-memo div { line-height: 24px !important; }
+    .b6-call-a{
+        text-decoration: underline !important;
+        color: #53a41e !important;
+}
+
+    .b-links{ 
+        top: 102px;
+
+        width: 880px;
+        height: 23px;
+        position: absolute; 
+        font-size: 16px !important;
+    }
+        .b-links a{ text-decoration: underline; color: #53a41e !important; margin-right: 18px; }
+        .b-links a:nth-child(odd){color: #0f79d6 !important;}
+        
+        .b-links a:first-child{color: red !important;}
+        .b-links a:last-child{color: #f3a243 !important;}
+        .b-links a:active{ text-decoration: none; color: #000 !important;}
+        .b-links a:hover{ text-decoration: none;}
+
+
+.b7-call{
+    float: left;
+    width: 201px;
+    height: 354px;
+    padding-bottom: 12px;
+    padding-top: 5px;
+    background-color: #76ab3b;
+    margin-top: 48px;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+    .b7-call div{
+        text-align: left !important;
+        float: left;
+        width: 183px;
+        padding: 6px 9px 6px 9px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #cccccc;
+        background-color: #ddded4;
+        font-size: 15px;
+        color: #868686;
+
+    }
+    .b7-call div span{ color: #000; font-size: 16px; }
+    .b7-call div b{ color: #940000; font-size: 16px; }
+    .b7-call div:first-of-type{ border-top: 1px solid #72845c; margin-top: 4px; }
+    .b7-call div:last-of-type{ 
+        border-bottom: none; 
+        border-radius: 0px 0px 6px 6px; 
+        font-size: 12px; 
+        line-height: 16px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #000;
+    }
+    .b7-call a{ 
+        float: left; 
+        display: table; 
+        width: 151px; 
+        height: 26px; 
+        padding-top: 4px;
+        border-radius: 6px; 
+        border-bottom: 1px solid #000; 
+        text-align: center; 
+        background-color: #e5e6db;
+        margin-top: 15px;
+        margin-left: 23px;
+    }
+    .b7-call a:first-of-type{ color: #000; }
+    .b7-call a:last-of-type{ color: #940000; }
+
+.print_talon_text_user_n_pol,
+.print_talon_text_user_birthday
+ {
+    display: none;
+}
+
+    /*Таблички*/
+
+    .b-memo-hidde{ position: relative; float: left; height: 1px; width: 100%;}
+    .b-check{ font-size: 16px; color: #a7a7a7; }
+        .b-check img{ margin-bottom: 14px;}
+        .b-check h1{ color: #d95200; font-size: 22px;  }
+        .b-check2 h1{ color: #82b744; line-height: 30px; }
+        .b-check a{ color: #82b744; text-decoration: underline;  }
+        .b-check font{ color: #82b744; }
+        .b-check .help_close{ color: #FFF; margin-left: 10px !important; text-decoration: none;}
+
+
+
+
+
+/* от мобильной версии */
+.containerBigButtonMobile, .enxTextMobile, .mobileViewTable, .menuMobile, .closeMenuMobile, .explanation_stepMobile {
+    display: none;
+}

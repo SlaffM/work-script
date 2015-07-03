@@ -126,9 +126,7 @@ module XML
 			xml.xpath(expression)
 		end
 
-		def build_variables_list		
-										
-			#variables = []
+		def build_variables_list
 
 			get_nodes(@doc).map do |i|				
 				
@@ -151,55 +149,109 @@ module XML
 	end
 	
 	
-	class EquipModel
-	
-		attr_accessor 	:file
-		attr_reader 	:variables
-	
-		def initialize(file="../files/xml/equip_model.xml")			
-			@file= file	
+	class EquipModel	
 
+		def initialize(model, file)			
+			@doc 	= file.get_doc
+			@model 	= model
 		end				
 	
 		def expression
-			"Subject/Apartment/SystemModel/Model"
+			"Subject/Apartment/SystemModel/Model/Groups"
 		end
 	
 		def get_nodes(xml)
 			xml.xpath(expression)
 		end
 		
-		def building_list		
-							
-			doc = Nokogiri::XML(File.open(@file, "r:UTF-8"))
-			h={}			
-			h = get_nodes(doc).map { |model|			
+		def get_template_doc
+			template_file = File.open(File.expand_path("../../files/xml/template_equipmodel.xml", __FILE__))
+			Nokogiri::XML(template_file)
+		end
+
+		def get_ready_model
+			doc_template = get_template_doc.root.children.at_css('Apartment/SystemModel/Model/Groups') 
+
+			group_child = builder_xml_from_model.doc.root.children
+
+			doc_template.add_child group_child
+
+			p doc_template.to_xml(encoding:'utf-8')			
+		end
+
+		def process_array(label,array,xml)
+			array.each do |hash|
+			    xml.send(label) do                 # Create an element named for the label
+			      hash.each do |key,value|
+			        if value.is_a?(Array)
+			          process_array(key,value,xml) # Recurse
+			        else			        	
+			          xml.send(key,value) unless key == :device         # Create <key>value</key> (using variables)
+			        end
+			      end
+			    end
+			  end
+		end
+		
+		def builder_xml_from_model
+			builder = Nokogiri::XML::Builder.new do |xml|
+		  		xml.root do                           # Wrap everything in one element.
+		    		process_array('group', @model, xml)  # Start the recursion with a custom name.
+		  		end
+			end
+
+			#builder#.to_xml(:encoding => 'utf-8')
+		end
+
+
+		def building_list
+
+			get_ready_model
+
+=begin
+
+
+			get_nodes(@doc).each { |model|			
 				Hash.from_xml(model.to_xml)
 			}		
-			
-			#puts JSON.pretty_generate(h)
+
+			puts JSON.pretty_generate(h)
 			
 			serialized = JSON.generate(h)
 			new_hash = JSON.parse(serialized, :symbolize_names => true)
 
 			
 			return new_hash
+			
+=end
+
+			#serialized = JSON.generate(@model)
+			#new_hash = JSON.parse(serialized, :symbolize_names => true)	
+
+			
+			#show_changes_in_doc @doc
+
+
+
 		end	
-		
-		def xml_show(xml)
-			xml.xpath("Subject/Apartment/SystemModel/Model")
+
+		def show_changes_in_doc(doc)
+			get_nodes(doc).each do |group|															
+					group = group.at_css('Groups/Name').content					
+					p "#{group}" unless group.empty?
+			end
 		end		
 
 	end
 
-	class ModelCreator
+	class ModelLinker
 
 		def initialize(model, file)
 			@model = model							
 			@doc = file.get_doc			
 		end
 
-		def link_variables_to_model			
+		def link			
 
 			@model.each do |vl_group|				
 
@@ -259,81 +311,84 @@ module XML
 	class ModelHelper	
 		
 		def initialize(variables)
-
 			@uuid = UUID.new
 			@variables = select_variables variables				
-			@list_groups = get_list_groups
-			
-		end
+			@list_groups = get_list_groups			
+		end		
 
-		def select_variables(variables)
-			variables.select { |variable| variable if variable.is_variable_ready? }
-		end
-
-		def get_list_groups	
-			@variables.map { |variable| { name: variable.get_vl_name, guid: @uuid.generate, childgroups: [] } }.uniq			
-		end
-
-		def prepare_model			
-
+		def prepare_model
 			@list_groups.each do |vl_group|
-
-				vl_group[:childgroups] = 	@variables.map do |variable|
-					 							create_device_group(variable) if vl_group[:name] == variable.get_vl_name
-											end.compact!
-
-				num = 1				
-
-				vl_group[:childgroups].each do |device_group|					
-					device_group[:group][:name] = get_device_name(device_group[:group][:name], num)
-					num += 1
-
-				end
-
+				vl_group[:guid]			= @uuid.generate
+				vl_group[:childgroups] 	= get_device_group(vl_group)
 			end
 		end
 
-		def create_device_group(variable)
-			
-			group = { group: {} }
-			group[:group] = { 
-								name: 			"#{variable.get_device_name}",
-								guid: 			@uuid.generate,
-								device: 		variable.get_prefix_device_name,
-								childgroups: 	get_ti_struct
-							}
-			return group
-		end
+		private
+		
+			def change_device_name(name, num)
+				name.include?("МИП") ? "#{name}_1" : "#{name}_#{num}"
+			end		
+	
+			def ti_list
+				['Ia', 'Ib', 'Ic', 'Ua', 'Ub', 'Uc', 'P']
+			end
+	
+			def get_ti_struct			
+				ti_list.map { |elem| {group:[{name: elem, guid: @uuid.generate}]} }			
+			end
 
-		def get_device_name(name, num)
-			name.include?("МИП") ? "#{name}_1" : "#{name}_#{num}"
-		end
+			def select_variables(variables)
+				variables.select { |variable| variable if variable.is_variable_ready? }
+			end
+	
+			def get_list_groups	
+				@variables.map { |variable| { name: variable.get_vl_name, guid: "", childgroups: [] } }.uniq
+			end
 
-		def build_model	
-
-			prepare_model
-
-		end				
-
-		def ti_list
-			['Ia', 'Ib', 'Ic', 'Ua', 'Ub', 'Uc', 'P']
-		end
-
-		def get_ti_struct			
-			ti_list.map { |elem| {group:{name: elem, guid: @uuid.generate}} }			
-		end
+			def get_device_group(vl_group)
+				group = @variables.map { |variable| create_device_group(variable, vl_group) }.compact
+				
+				num = 1
+				group.each do |device|					
+					device[:group][0][:name] = change_device_name(device[:group][0][:name], num)
+					num += 1
+				end				
+			end
+	
+			def create_device_group(variable, vl_group)
+				create_device(variable) if vl_group[:name] == variable.get_vl_name
+			end
+	
+			def create_device(variable)			
+				group 				= 	{ 	group: [] }
+				group[:group][0] 	= 	{ 
+											name: 			variable.get_device_name,
+											guid: 			@uuid.generate,
+											device: 		variable.get_prefix_device_name,
+											childgroups: 	get_ti_struct
+										}
+				return group
+			end
 
 	end
 
 end
 
 
-file = XML::XML.new("../files/xml/1.XML")
+file_variables = XML::XML.new(File.expand_path "../../files/xml/1.XML", __FILE__)
+file_equipmodel = XML::XML.new(File.expand_path "../../files/xml/template_equipmodel.xml", __FILE__)
 
-variables = XML::Variables.new(file).variables
 
-model_helper = XML::ModelHelper.new(variables).build_model
+variables = XML::Variables.new(file_variables).variables
 
-model = XML::ModelCreator.new(model_helper, file).link_variables_to_model
+#variables.each {|elem| p elem}
 
-file.write_document_to_xml model
+model_helper = XML::ModelHelper.new(variables).prepare_model
+
+#model_helper.each {|elem| p elem}
+
+#XML::ModelLinker.new(model_helper, file_variables).link
+
+#file.write_document_to_xml model
+
+equip_model = XML::EquipModel.new(model_helper, file_equipmodel).building_list

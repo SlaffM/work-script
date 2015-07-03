@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://habrahabr.ru/users/maxelc/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./habr_files/watch.js"></script><script async="" src="./habr_files/analytics.js"></script>
+    
+    <meta content="width=1024" name="viewport">
+
+
+    <title>Хабрацентр им. maxelc / Хабрахабр</title>
+
+    <meta name="yandex-verification" content="67d46b975fa41645"> <!-- яндекс вебмастер - верификация -->
+
+    
+    
+
+    
+
+
+    <link href="http://habrahabr.ru/styles/1427362301/assets/global_main.css" rel="stylesheet" media="all">
+    <script type="text/javascript" src="./habr_files/global_main.js"></script>
+    	<link href="http://habrahabr.ru/styles/1427362301/forms.css" rel="stylesheet" media="all">
+	<link href="http://habrahabr.ru/styles/1427362301/users/all.css" rel="stylesheet" media="all">
+	<link href="http://habrahabr.ru/styles/1427362301/users/habracenter.css" rel="stylesheet" media="all">
+
+    <link href="http://habrahabr.ru/styles/1427362301/printer.css" rel="stylesheet" media="print">
+
+    
+    
+
+
+
+
+    	<script type="text/javascript" src="./habr_files/jquery.form.js"></script>
+	<script type="text/javascript" src="./habr_files/all.js"></script>
+	<script type="text/javascript" src="./habr_files/habracenter.js"></script>
+
+
+      <!-- www.criteo.com/ru -->
+<script type="text/javascript">
+  var crtg_nid="2580";
+  var crtg_cookiename="cto_rtt";
+  var crtg_varname="crtg_content";
+  function crtg_getCookie(c_name){
+    var i,x,y,ARRCookies=document.cookie.split(";");
+    for(i=0;i<ARRCookies.length;i++){
+      x=ARRCookies[i].substr(0,ARRCookies[i].indexOf("="));
+      y=ARRCookies[i].substr(ARRCookies[i].indexOf("=")+1);
+      x=x.replace(/^\s+|\s+$/g,"");
+      if(x==c_name){return unescape(y);}
+    }
+    return'';
+  }
+  var crtg_content = crtg_getCookie(crtg_cookiename);var crtg_rnd=Math.floor(Math.random()*99999999999);
+  var crtg_url=location.protocol+'//rtax.criteo.com/delivery/rta/rta.js?netId='+escape(crtg_nid);crtg_url+='&cookieName='+escape(crtg_cookiename);crtg_url+='&rnd='+crtg_rnd;crtg_url+='&varName=' + escape(crtg_varname);
+  var crtg_script=document.createElement('script');crtg_script.type='text/javascript';crtg_script.src=crtg_url;crtg_script.async=true;
+  if(document.getElementsByTagName("head").length>0)document.getElementsByTagName("head")[0].appendChild(crtg_script);
+  else
+  if(document.getElementsByTagName("body").length>0)document.getElementsByTagName("body")[0].appendChild(crtg_script);
+</script><script type="text/javascript" src="./habr_files/rta.js" async=""></script>
+      <script>
+        var N = 5;
+        var ar_duo1 = Math.floor(Math.random()*N+1);
+      </script>
+      <script type="text/javascript" src="./habr_files/adriver.core.2.js"></script>
+
+    
+
+    
+<script type="text/javascript">
+
+    var user_type = "guest";
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-726094-1',  'auto' );
+    ga('create', 'UA-726094-24', 'auto', {'name': 'HGM'});
+
+  ga('require', 'displayfeatures');
+  ga('set', 'dimension1', user_type); // user type - guest/readonly/habrauser
+  //ga('set', 'dimension2', username); // username
+
+
+
+  if(typeof removeUtms === 'undefined') {
+    removeUtms = function(){};
+  }
+  ga('HGM.send', 'pageview');
+  ga('HGM.set', 'dimension1', user_type);
+  ga('HGM.set', 'dimension2', "habrahabr");
+  ga('send', 'pageview', { 'hitCallback': removeUtms });
+
+</script>
+
+
+    <meta content="Хабрахабр" name="apple-mobile-web-app-title">
+<link href="http://habrahabr.ru/images/apple-touch-icon_142x142.png" rel="apple-touch-icon" type="image/png">
+  <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAAQCAYAAADK4SssAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADopJREFUeNqsWQt0lNWd/33fzGQemUcmzwkhSkhYSSgpJJGVWHlEVEwLq0AFhC520xN0cfcUkHZ7QNetwfac6mp3oR5Ss8c9XaPVhoJCtGwSkYQglQBBNg/IgxBIQl7zyCSZ97f/e7+ZyeShpu7eM/fc797vu9/j/u7v93+MUqlUwuv1IlQ6Ojqk7u5utLaWo/nanfB45tbnsSI6GgsXLhQwpcx/9rCE/0PpOLSL39Pnh9TY2Y1NJXW4NeTFz59agp9uXASfYwR/Xv9dxJ6pxwJBhCIQoKtFuIUAXPRksyTx+U2rVy0TtdrywNhYeviFJAlSsJ1oJNY2ZdfVLeKdiGIb96Kqw45LvU40Dbj42F2mKNyXasCjGTGI0aqmvr6wdseL075fEORl6h+yYWzcDaNeh8Q4E7z0kVPLx//5Il0uTLqHQqGA3z/92qioKHg8Hn5/SZqYogwdOBwO6d19+9DQ0ADdqrmTJhesLML6nQ38uLj4jHSkuJi/a+Q1vd8QxORg6/dBUtDblLzbhBuuOIhJcfhl5QCeyB9DusWA3MO/hf2+e6FwjtFHKGj15Y8M0Cd0KQTpbr8kCBrNsaTn9iXoH3jga5/739nZC7Mj+n7aHBVNwwSUEhuy4rCR6m8vD9ID5MVyeAI4cPo2suI0KMpJgEoU+A5QiCKmg0jT6H49/cP4Tt4i/FXaHLS0d6O57RZ0WvXXvltaWhpOnz7NCbZ371588MEHHLQ9e/bwev78eTzzzDPo7+8PzxFDIO4rKOAgomHihq+9ckxgdd26dWHQSkuBvJ2lmLqTv2kJbQAGot/nw9U7xDa9CQHakY5xFd45f4OdhWZhFtz534GP9k9A9PPWIxGgAu2AgHwP79hYYseRI8q+f/832Kqr4O7t5bt6pioFAmIkiJXXrbCYtbg85MF1q5vv+IFxH6KUApSizLDsJB09F2i3yozoc3pn/CaBVKPr9gC+X3g/3ih5GruL1mPPjx7DwLCdA/x1xWKx4K677kJ6ejpWr14dHt+xYwdSUlKQl5cHvV4/aQ7/GMZEDiDVI9IF4asecqQ4FwzvnaWl/x84hhnJwFAKSiTFaCDS7ifhhEjMu9pJS0dg0SH8Bh28BKqCXSuRxAp+ApMAFBX8Hj6PR3G+uhrDFRXoeekltG3ZjOsbN6L7wH4M/O53GKEX97pc8NGGCckSW9ibdg9anBJqu0ZgpFvNM0ahf8yH75GU7siOx3aqIjHQS8+N0SiRGa/BhR4nLHpVhBSKfEN03erHny+3IinehBf+cQuqzzby8+1dfURuKSy5X1UMBkP4eM6cOfxdmdQuWrSIj7nd7mlAKquqqqTyVXtnvfCFhUkoRi4xswG7V7RIM9lMVvJJHoryM7Gr4hxcLisfO7m3EIcrm1HZ3DmNkYIo79RHFsfjbHMvlGozLTKBKSpJPhUQ3WRvmlpwO1mE1WCGygMk2pxIcHjhlfzBzSDbQ2Jb2C56Bwfhra2F40wtFxHRaMK899+nU/LzGGAvnR+ARSUTNDVaBTVRMI6AO3VjhMCRkGPRUQusutuABbFqDsaJ63akmtQEZhSf5xx1wWTU4eBPfoDBYQeSE818fOV9i/HZpVYcPPQeLPHmWQGZmJgYPmasZGXt2rUcTFaiyVeJBJszMgxi7uxZxFjJrn/tzBnef5MA6iwp4uCFyrjVhieXp6H5wIYw61ip2FUIjcYc7oeO227a2DKjeG0GFib74LPZoVf58NTKuSSiAkr/9CaeeMSFFQeWYsOPv4XCvVl44GdLsbVoMU5mmcLsCrUBWnneRlYa81qHJzHy983UJzBvOTy8ppvV/Nz+2j581GwjGZav27AwBp/dHsUgXcuY1TLgxns0N/y9LjdMhmisJuD+dkMB1j24jJ7jx5vvnsLT+98gJ8cHg147q/XNysoCcziHhoY4C1NTU7F582Y0NjZikDZmXFzcdGkt6f8IxReO/KWKKDAsS4P29EDZOVhJsqqDgC6NMeOSzQrzc+Uhr5SDvPHwOd4/vHF5WFYL0mL48fee/wBHP2lGkl6Dcy+vwVu70nHhYB7WLJmDX/ypFDsbf42erBTZmwPRkfTVRTJXnx2Ln27PnQCSFpm1UhA8KeDnAPI2OM6cCCnoxLzfYkP3qA/dTh/ujPuxxKJF7e0x1BIbB91+LErUYoDA23rsBk5ccyCRGHu224meMT+fGyrxsUb09VtBHiyy1/4DOm7ewcjoOF58vRz6aDUSyGP1zeCxzlSYnLa3t8NqtUKtVnM2LliwALWkLIyJbA00Gs1kaaVJQjD8mOa87H7uMT722LrdMzyOFq9BRrKPQMspeZsDU09AHn1ug7yLXzmKtANlKNtWyEF+tvwcHny1kh8XZBbBQvawzya7+MMuLX7063r85vhlFORasH/7CtouEk5f/xzPf/IykJFI8ubjVl3wqYJSSrbTEwi/ul+SJTUEaESowVuOHXUiGXnJ6oVRLTP50XkGREcp8M41GzpcPjycZICOJPdfzvXhf0a8+GGWnhwfAUdJVtvo/IhnAphAQOJ2Uh2lQrROgzlJsQRmHwFsQrRWQ8wOzJoljG03b97kjMzIyMDWrVu5XaypqcGWLVsQGxsLo9E43dmZzY1n64Ey4Ha9XcP7DFAG4qGT5/BqzSUcenI5Dm3L5+dqyA4yUPPpelZiFR7oozSov+7Cq+XXcKN/lBZbgfmxKchIzyEL74JIjqboVxIkBCAtnAAVj4Ek0SMvZnCxQrLqj6wRUhsJJK097rj8vK4hG+ghKX2fgGL9VanRXEb/i5jH+o/ON5LDI6G8Ve6LX2LuEgg8jVqFnjvD8Hh9s7KLkxzA5GR88cUXOH78OO8zz5W998mTJ9HZ2Ul+g8jlNfK+XwlkKPzIzc2d4U0aJtlVJqche8ecmRCgBZnJxNInZfDoJTItMSSxlSh6uxL1nRNOj9c2iLlaN9bnxeMHaxfC5qAQgZ6aGpeMs1tK8XD8CkhjTlpYGiSAA4LMQ84yr2qatPpD8uqPlFm55dIaBHLzPSZIPgksuls334CaW04MkcyKBOg6Au6znjH0EBtTSMbvn6NDzQ0HOUh+PofNjSzs3g7nOCwJsrnout0fTkR8qY2aAWSz2Qyn0ymHg8HS3NzMEwHDw8Nhh2fGhMBfUljcyexjcQSQjH0hqXz7Inmml3oJOBsHtDAzDYe3FfDz5ec6Z/RaS/YU4KHcxYgzi/DZmzA8dAZdl3uQnLEJ8YYEnNj0Ov7mvT34uLcaUhTJip88WWJWIKAIpyZC3ioHjR1JEZmdCImNZGTx4jiUXbWjMM0IA8lqxXUHD+hXpuoRr1Xil239fLGfINBEan9P7BQ4FQU+V3aOJc4+pVKBzu4+PLWpgI9/WPM5OTi6aVmYyDJ1XKvVchvIWNfa2gqbzYaYmBhcvHiRn3e5XOHMzyQb+U2A3PfudU7I3btXhMeYPczJSkOaRYNtOZnYW7A0bP8YsCWVsrQeICbOFEduLfg2nIONuHz8aZhxBUrVGJRuEZ3XDiHlwT/CGJuOfy3Yi7r/uIIRkmGFjxYnwLIItKi+CSC5LQy24TWakqbjqa/gcS45M0uTNBwoJpvH2x3cS348w8gX+Xib3P/+PTFw+wI41j7C+0voO9lcbt/tTjz+yHIUrs6Fj+59b/YCUpRR2Kk6yeFhVU92U6OO4naUybXb4+XjLHUXWZhkqlQqDhh7z7a2Np4AuHr1aohE4ViTpVfZpvxGQL5UeYfHkCxLFxlDMi/1Ur0cLx44Ws9ldlvOBLAhtvZ+SWbHHRhFa/VOpBvPw2RmwTUF/14JmsEm9NfthmH9CdwTfzcs0YkYcXXCz9ItBKKKHB+fT86weP3+PkLMEo4jg6yMBDEEZIgJbOdXbUjD65eHUHumD0PjPs7wJqsb/1TXh3aKU1MMKiwjb/bDNjtsJKkatYC3Hkrhc/kmXrscP3tmEy43dWJJlhyCMafnk3cO4sKVNlTXX+FMHbQ64HJ7OaCW+Bjk52by8cgyb948XkdGRnifAUjrzG0jT3oEgWN2NDIXq4w0ebMpDMTcXBZLFn9lnpUlAcoigC3Kz+GMZACHEgSRcaTH3g+97xY0qhiMkI0SfGQH6T112lj4XbcheEcxLkbD5RylhVaRrEaRnfSSp+oPhxIdbvezGqWyjEAyRUrWVCBd4+PSRbf79KaQTSL79/cUxtxf0SknSlmsfMUatmHLLDouq0eJrfPj1PjNymSYVBPuhdmkD4cgpz+7ircqqqEimd3+2Cqs/OtvIS87I3zt6JiLJxkYCMyeNkaYGZ5YINtYVVUVls6ysjJuGxn7WDl16hQHmkkua0MAh4H8lb0G+0wFM4PX0BBeBQZiza+2TEqaJ0eAGQpBJuUOYyZinpzkGHJyrNOeoY2ZB3XCGowOV0Cp0/HQQylEwT+ugHrOOrKLenz4+cfosfdCMJDdYZkZryh7qpKcXdnZ1VXBcg4/TkwUF2k0+00KxaNmhSJPIQiT/rLoaGv7/BeDgw+9HDGWpFOh5ckM/KFjBD+pv4MeZ5C19BOVMmiPLzDhlRXJaOwdxVxj9IR/8FE9zl9q5Uy7eq0LNvsoHz97oYXCEDOSE8xIosrklaX6HCNj6O4d4uHJ1MKcmhdeeAF2u5336+rqOOgh23jixAlcuXJlGiOFqX9jsfLpp59Kxz58jXutISCZB7Vq6WZsvdc0499Y1iDTmPe6sYAko09+cC8Ftb29cuBcUrQcyVoz8l+ZsJNmmhP+G2t0SLI1vg6l/QuI3jEEVBqoLQ9DsbgILT19+O4bu3BLHKDFoLCA7SOJZEZSQTpY86X+/TK9XvmEyfR30aK4MUWjyffpdM4NjY2RyaZpXgizsSPeAKxuOZwxq0Wyj360DpFtpsvvm6sPyypbwzXbn5eYTWS206jXUhCv4gLA7sOk1OX2kE1kGaEAv4Y5RVq6RqtR8+OP3vrnaX9jRXq1kvT1/0/8rwADAJ+LRelLmVNwAAAAAElFTkSuQmCC) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}</style></head>
+
+  <body data-feedly-mini="yes"><style type="text/css">#navbar .nav_panel .tab.tab_print:hover path,#navbar .nav_panel .tab.tab_print:hover text { fill: #54b848; } </style>
+    <div id="TMpanel">
+  <div class="container">
+    <div class="menu">
+      <a href="http://tmfeed.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">TM Feed</a>
+      <a href="http://habrahabr.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo" class="current">Хабрахабр</a>
+      <a href="http://megamozg.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Мегамозг</a>
+      <a href="http://geektimes.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Geektimes</a>
+      <a href="http://toster.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Тостер</a>
+      <a href="http://brainstorage.me/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Brainstorage</a>
+      <a href="http://freelansim.ru/?utm_source=habrahabr&utm_medium=referral&utm_campaign=mainpage&utm_content=head_link">Фрилансим</a>
+    </div>
+      <div class="menu special"><a href="http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=506846&bt=21&pid=1853254&bid=3703352&bn=3703352&rnd=1913435293" target="_blank" style="color: orange">Простое SEO</a><a href="http://special.habrahabr.ru/dit/" target="_blank" style="color: red">Тест 130 000 видеокамер Москвы</a></div>
+  </div>
+</div>
+
+
+    <div id="layout">
+      <div id="navbar_overlay" class="hidden"></div>
+<div id="navbar" style="bottom: 29px;">
+    <div class="nav_panel">
+        <a href="http://habrahabr.ru/" class="logo"></a>
+
+            <a href="http://habrahabr.ru/posts/" class="tab tab_menu" data-tab="menu_tab" title="Меню"><span class="g-icon g-icon-burger"></span></a>
+            <a href="https://habrahabr.ru/auth/login/" class="tab tab_login" id="login" title="Войти"><span class="g-icon g-icon-lock"></span></a>
+
+        <a href="http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=516228&bt=21&pid=1918974&bid=3791829&bn=3791829&rnd=2081458763" class="tab tab_print" id="print_tab" target="_blank" data-post-id=""><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+<path fill="#C0C0C0" d="M445.8,227.7c-0.7-7.9-6-15-13.6-18.1c-1.3-0.5-2.7-0.8-4.1-0.8c-4.8,0-9.1,3.1-10.5,7.7l-11.5,38.1
+	c-0.6,1.9-0.2,4.1,1,5.6c1.6,2.1,4.2,3,6.7,2.5l19.3-4.5c7.6-1.8,13.1-8.5,13.2-16.4v-2.1c0-3.5-0.1-6.8-0.3-10L445.8,227.7z"></path>
+<path fill="#C0C0C0" d="M434.5,267.9c-0.6,0-1,0-1.6,0.2l-19.9,4.7c-7.3,1.6-12.4,8-12.7,15.5l-1.5,50c0,1.1,0.3,2,1.1,2.8
+	c1.5,1.5,4.6,1.6,6.2-0.1c17-18,29.3-40.2,35.5-64c0.6-2.1,0.1-4.5-1.3-6.2C438.9,268.9,436.8,267.9,434.5,267.9"></path>
+<path fill="#C0C0C0" d="M432.9,199.4c2,0.8,4.6,0,5.8-1.6c0.5-0.7,1-1.7,0.5-3.1c-0.7-2.2-1.5-4.5-2.2-6.6l-2.5-6.3
+	c-4.8-11.1-11.1-22.1-19.8-34.4c-0.6-0.8-1.5-0.9-1.8-0.9c-0.5,0-1,0.1-1.2,0.4c-0.1,0.1-0.3,0.4-0.2,0.9l8.1,35.8
+	C421.2,190.6,426.2,196.6,432.9,199.4"></path>
+<path fill="#C0C0C0" d="M402,193.5l-24.8-17.2c-0.6-0.5-1.2-0.7-1.8-0.7c-1,0-1.9,0.6-2.6,1.4c-0.6,0.9-0.7,1.8-0.4,2.8l20.9,67.2
+	c0.4,1.3,1.5,1.8,2.5,1.8c1,0,2.1-0.5,2.6-1.8l10.3-34.3C410.9,205.5,408.2,197.7,402,193.5"></path>
+<path fill="#C0C0C0" d="M377.1,164.4l25.4,17.6c1.7,1.2,4,0.8,5.2-0.8c0.8-0.9,1-2,0.8-3.2l-8.6-38.1c-1.4-6.5-4.8-12.2-9.6-16
+	c-1.2-0.9-2.5-1.4-4-1.4c-2.7,0-5.1,1.6-6.2,4.2l-8.3,19.1C368.9,152.5,371.1,160.3,377.1,164.4"></path>
+<path fill="#C0C0C0" d="M385.2,286.6c-1.1,0-2.1,0.4-3.1,1l-36.6,26.3c-2.3,1.7-3.8,4.3-3.9,7.2c-0.1,2.9,1.1,5.6,3.2,7.5l35.2,30.3
+	c1.6,1.3,3.8,1.4,5.3,0.3c2-1.5,3.2-3.8,3.3-6.3l1.8-60.7c0.1-1.8-0.8-3.1-1.5-3.8C388.1,287.2,386.6,286.6,385.2,286.6"></path>
+<path fill="#C0C0C0" d="M345.5,164.7h-0.8l-26.4,1.3c-2,0.1-3.7,1.3-4.4,3.1c-0.7,1.8-0.4,3.8,1,5.3l65.5,72.8
+	c0.6,0.7,1.7,0.5,2.3-0.2c0.2-0.4,0.3-0.8,0.2-1.3L361,176C359,169.4,352.6,164.7,345.5,164.7"></path>
+<path fill="#C0C0C0" d="M339.6,306.2l36.1-25.9c1.8-1.3,2.1-3.2,1.8-4.6c-0.4-1.4-1.5-3-3.5-3.4l-61.2-12.3c-0.3,0-0.7-0.1-1.1-0.1
+	c-1.7,0-3.4,1-4.3,2.5c-1,1.6-1.1,3.4-0.2,5l17.3,35c1.7,3.5,5.2,5.6,9.1,5.6C335.9,308.1,337.9,307.5,339.6,306.2"></path>
+<path fill="#C0C0C0" d="M299.2,235c-0.3,7.2,4.6,13.5,11.7,14.9l62.8,12.5c1.7,0.4,2.9-0.7,3.4-1.7c0.5-1.1,0.3-2.3-0.6-3.2
+	l-68.1-75.7c-1.1-1.2-2.2-1.5-3-1.5c-1.9,0-4,1.5-4.1,4L299.2,235z"></path>
+<path fill="#C0C0C0" d="M356.2,138c0.8,1.7,2.4,2.7,4.3,2.7c1.4,0,3.4-0.8,4.4-2.8l5.5-12.8c2.9-6.7,0.1-14.5-6.5-17.7
+	c-5.4-2.7-11-5-16.6-7c-0.5-0.2-1.1-0.3-1.6-0.3c-1.6,0-3.1,0.9-4,2.2c-0.9,1.3-1,2.9-0.3,4.4L356.2,138z"></path>
+<path fill="#C0C0C0" d="M341,337.9c-0.9-0.8-1.9-1.2-3-1.2c-1.4,0-2.5,0.5-3.4,1.4c-0.7,0.7-1.3,1.7-1.3,3.4l0.4,29.6
+	c0.1,5,4,9.1,8.7,9.1c0.9,0,1.8-0.2,2.6-0.4c6.9-2.3,13.5-5,19.9-8.2c2-1,3.3-2.8,3.6-5.1c0.4-2.8-0.8-5.7-3.1-7.6L341,337.9z"></path>
+<path fill="#C0C0C0" d="M314.4,156.6l0.6-0.1l26.9-1.4c2.5-0.1,4.8-1.5,6.2-3.7c1.3-2.2,1.5-4.8,0.3-7.3L327.5,100
+	c-1.7-3.5-4.8-5.9-8.3-6.4h-0.8c-2.7,0-4.9,1.9-5.4,4.6l-7.9,47.2c-0.5,2.7,0.3,5.6,2.1,7.8C309,155.3,311.7,156.6,314.4,156.6"></path>
+<path fill="#C0C0C0" d="M316.8,333c-1.2,0-2.2,0.3-3.2,0.9L280,352.1c-2.6,1.4-4.4,3.8-4.8,6.7c-0.5,2.8,0.3,5.7,2.2,8l9.2,10.6
+	c5.8,6.6,14,10.2,22.4,9.6l2.1-0.2c7.4-0.6,13.1-6.9,13-14.1l-0.5-32.8C323.6,335.6,320,333,316.8,333"></path>
+<path fill="#C0C0C0" d="M314.7,310.9c1.2-1.8,1.3-4,0.3-5.9l-17.8-35.8c-1.7-3.8-5.5-6-9.6-6c-2.1,0-4.1,0.6-5.9,1.7L227.3,300
+	c-1.5,1-1.7,2.4-1.5,3.5c0.3,1.1,1.2,2.3,2.9,2.5l80.3,7.8C311.4,314,313.6,312.9,314.7,310.9"></path>
+<path fill="#C0C0C0" d="M228.5,315.7c-1.4,0-2.2,1-2.5,1.8c-0.2,0.4-0.6,1.9,0.8,3l26,21.9c5.7,4.7,14.3,5.6,20.9,2.1l30.6-16.7
+	c1.3-0.7,1.5-1.9,1.4-2.9c-0.2-0.9-0.9-1.9-2.3-2.1L228.5,315.7z"></path>
+<path fill="#C0C0C0" d="M232,119.3l51.7,29.5c1.3,0.8,2.6,1.1,4,1.1c4,0,7.4-2.8,8-6.7l6.5-39c0.5-3-0.3-6.1-2.3-8.3
+	c-1.8-2.2-4.6-3.5-7.5-3.5h-0.4c-2.2,0.1-4.5,0.2-6.7,0.5c-19,1.6-37.2,7-54.1,15.8c-2.4,1.3-2.8,3.4-2.8,4.5
+	C228.3,115.6,229.8,118,232,119.3"></path>
+<path fill="#C0C0C0" d="M284.4,236c2.5,0,5.2-1.9,5.4-5.1l1.9-47.9c0-1.7-0.7-2.9-1.4-3.5c-0.9-1-2.1-1.6-3.5-1.6
+	c-1.1,0-2,0.4-2.9,1.1l-26.8,21.3c-2.2,1.8-3.6,4.5-3.6,7.4c0,2.9,1.3,5.7,3.5,7.6l24,19.6C282.1,235.6,283.3,236,284.4,236"></path>
+<path fill="#C0C0C0" d="M238.2,188.9c1.3,3.3,4.5,5.5,8,5.5c1.9,0,3.8-0.7,5.3-1.9l28.3-22.5c2-1.6,3.1-4.1,2.9-6.7
+	c-0.2-2.6-1.7-4.8-3.9-6.2L214,120c-0.2-0.1-0.4-0.2-0.7-0.2c-0.3,0-0.6,0.1-0.8,0.3c-0.3,0.2-0.5,0.7-0.3,1.1L238.2,188.9z"></path>
+<path fill="#C0C0C0" d="M222.1,291.9l53.7-34.6c2.3-1.5,3.8-4,3.9-6.7c0.2-2.7-1-5.3-3.1-7.1l-25.1-20.4c-1.4-1.2-3.2-1.8-5-1.8
+	c-3.5,0-6.6,2.1-7.6,5.4l-21.5,61.5c-0.4,1.3,0.1,2.3,0.4,2.8C218.7,292.4,220.6,292.8,222.1,291.9"></path>
+<path fill="#C0C0C0" d="M268.5,371.3c-4.6-5.1-11.1-8.1-18-8.1c-1.1,0-2.2,0.1-3.3,0.2l-14,2c-1.7,0.2-2.8,1.6-3,2.9
+	c-0.2,0.7-0.1,1.8,1.3,2.6c3.9,2,7.9,3.9,11.9,5.5l6.3,2.3c7.1,2.5,14.5,4.6,22,5.9c2,0.4,3.5-0.9,4-2c0.6-1.4,0.4-2.8-0.6-3.9
+	L268.5,371.3z"></path>
+<path fill="#C0C0C0" d="M244.1,351.2c0.5-1.7,0-3.6-1.4-4.7l-28.1-23.6c-2.8-2.3-6.3-3.6-10-3.6c-3.4,0-6.8,1.1-9.5,3.2l-2,1.5
+	c-2.7,2.1-4.5,5.3-4.7,8.6c-0.2,2.8,0.7,5.5,2.6,7.4c3.2,3.5,6.6,6.9,10.1,10c6.2,5.4,14.9,7.9,23.6,6.7l15.7-2.2
+	C242.2,354.3,243.6,353.1,244.1,351.2"></path>
+<path fill="#C0C0C0" d="M190.5,225.6c1.5,1.8,4.3,2.4,6.5,1.2l26.5-15.1c6.1-3.5,8.8-11.1,6.3-17.7l-25.4-66.3
+	c-0.1-0.3-0.5-0.5-0.7-0.2c-0.1,0.2-0.1,0.4-0.1,0.6l-14.3,93.6C189.1,223.1,189.5,224.6,190.5,225.6"></path>
+<path fill="#C0C0C0" d="M227.9,224.1c-0.7-1-1.8-1.5-3-1.5c-0.6,0-1.2,0.2-1.8,0.5l-24.9,14.2c-6.3,3.6-9.2,11.1-6.8,18l10.6,30
+	c0.6,1.5,1.9,2.1,3.1,2.1c1.1,0,2.5-0.6,3.1-2.2l20.1-57.7C228.8,225.8,228.2,224.6,227.9,224.1"></path>
+<path fill="#C0C0C0" d="M195.2,295l-11.1-31.7c-0.7-2-2.5-2.7-3.9-2.7c-1.6,0-3,0.9-3.8,2.3l-9.1,19.4c-3.8,7.9-3.9,16.6-0.3,23.6
+	c1.3,2.5,2.6,4.9,4,7.4c1.9,3.4,5.5,5.4,9.4,5.4c2.5,0,4.9-0.9,6.9-2.3l2.1-1.6C195.4,310.1,197.7,302.1,195.2,295"></path>
+<path fill="#C0C0C0" d="M169.2,225.3c1.2,1,2.5,1.5,4,1.5c2.8,0,5.9-1.9,6.5-5.5l11.4-74.7c0.1-0.8-0.1-1.4-0.6-1.9
+	c-0.5-0.7-1.4-1-2.1-1c-0.7,0-1.6,0.2-2.2,1.1c-13.8,16.3-24,35.6-29.6,56.1c-1.9,7.3,0.9,15.2,7.4,20.3L169.2,225.3z"></path>
+<path fill="#C0C0C0" d="M165.6,234.8l-4.8-3.8c-1.1-0.9-2.3-1.4-3.7-1.4c-2.7,0-5.6,1.9-5.7,5.4c0,1.6-0.1,3.1-0.1,4.6
+	c0,2.9,0.1,6,0.4,9.8l0.6,6.7c0.6,5.5,1.6,11,2.8,16.4c0.4,1.9,2,2.1,2.6,2.1c1.3,0,2.9-0.6,3.8-2.4l8.6-18.3
+	C173.2,247.3,171.3,239.3,165.6,234.8"></path>
+<path fill="#C0C0C0" d="M112.9,462.4c-1.3-1.4-2.9-2.6-4.8-3.6c-1.9-1-4-1.9-6.3-2.8l-5.5-2.1c-0.9-0.4-1.8-0.7-2.7-1.1
+	c-0.9-0.4-1.7-0.9-2.5-1.5c-0.7-0.6-1.3-1.3-1.7-2.1c-0.4-0.8-0.6-1.8-0.6-3.1c0-1.5,0.3-2.7,0.8-3.7c0.5-0.9,1.2-1.7,2.1-2.1
+	c0.8-0.5,1.8-0.8,2.9-1c1.1-0.2,2.1-0.3,3.1-0.3c1.7,0,3.2,0.1,4.6,0.2c1.3,0.2,2.5,0.4,3.6,0.6c1.1,0.2,2.1,0.5,3,0.9
+	c0.9,0.4,1.9,0.7,2.8,1.1c1.6-3.4,2.5-6.9,2.9-10.4c-3-1-5.8-1.8-8.5-2.4c-2.7-0.5-5.6-0.8-8.7-0.8c-3.4,0-6.5,0.4-9.2,1.2
+	c-2.7,0.8-5.1,2-7,3.6c-1.9,1.6-3.5,3.6-4.5,6c-1.1,2.4-1.6,5.1-1.6,8.2c0,2.6,0.3,4.7,1,6.6c0.6,1.8,1.5,3.4,2.7,4.7
+	c1.2,1.3,2.6,2.4,4.2,3.4c1.6,0.9,3.5,1.8,5.6,2.6l5.6,2.1c1.1,0.4,2.2,0.9,3.2,1.3c1,0.5,2,1,2.8,1.7c0.8,0.7,1.5,1.5,2,2.5
+	c0.5,1,0.8,2.2,0.8,3.7c0,2.9-1.1,5.1-3.3,6.5c-2.2,1.4-5.2,2.1-9,2.1c-2.6,0-5-0.3-7.2-0.8c-2.3-0.5-4.6-1.3-7.2-2.3
+	c-0.7,1.9-1.2,3.9-1.7,5.8c-0.5,1.9-0.8,3.8-1,5.5c1.5,0.6,3,1.1,4.4,1.6c1.4,0.4,2.8,0.8,4.2,1c1.4,0.3,2.9,0.5,4.5,0.6
+	c1.6,0.1,3.4,0.2,5.4,0.2c4.1,0,7.7-0.5,10.8-1.6c3.1-1,5.8-2.5,7.9-4.3c2.1-1.8,3.8-4,4.9-6.6c1.1-2.6,1.7-5.4,1.7-8.5
+	c0-3-0.4-5.5-1.1-7.5C115.2,465.6,114.2,463.9,112.9,462.4"></path>
+<path fill="#C0C0C0" d="M161.5,447.8c-2.2-0.4-4.4-0.5-6.7-0.5c-2.4,0-4.8,0.2-7.2,0.5l-11.7,22.4l13.7,24.7
+	c2.4,0.4,4.6,0.5,6.7,0.5c2.3,0,4.7-0.2,7.2-0.5l-14-25.3L161.5,447.8z"></path>
+<path fill="#C0C0C0" d="M121.2,428.3v66.6c2.1,0.4,4.2,0.5,6.4,0.5c2.2,0,4.3-0.2,6.5-0.5v-66.6c-2.1-0.4-4.3-0.5-6.5-0.5
+	C125.4,427.7,123.2,427.9,121.2,428.3"></path>
+<path fill="#C0C0C0" d="M203.3,447.3c-2.1,0-4.2,0.2-6.2,0.5L186,488.9l-9.8-41.1c-1-0.2-2.2-0.4-3.5-0.5c-1.3-0.1-2.5-0.1-3.7-0.1
+	c-0.9,0-1.9,0-3,0c-1.1,0-2.3,0.2-3.7,0.5l13.8,47.1c0.5,0.1,1,0.2,1.6,0.2h1.9c0.9,0,1.7,0,2.5,0c0.8,0,1.6-0.1,2.2-0.1l-1.5,5.6
+	c-0.5,1.8-1,3.1-1.6,4.1c-0.6,1-1.3,1.7-2,2.1c-0.7,0.4-1.4,0.7-2.1,0.8c-0.7,0.1-1.5,0.1-2.2,0.1c-0.9,0-1.8-0.1-2.7-0.2
+	c-0.9-0.2-1.6-0.3-2.2-0.5c-0.5,1.2-0.9,2.5-1.2,3.8c-0.3,1.3-0.5,2.7-0.5,4.1v0.7c0,0.2,0,0.5,0.1,0.8c1.3,0.4,2.7,0.7,4.1,0.9
+	c1.4,0.2,2.9,0.3,4.6,0.3c1.8,0,3.5-0.2,5.1-0.5c1.6-0.3,3-0.9,4.3-1.8c1.3-0.9,2.4-2,3.4-3.6c1-1.5,1.9-3.4,2.6-5.7l17.6-58.2
+	c-1.5-0.3-2.8-0.5-3.8-0.5C205.2,447.3,204.2,447.3,203.3,447.3"></path>
+<path fill="#C0C0C0" d="M239.9,482c-2,2.4-4.9,3.6-8.7,3.6c-2.1,0-4-0.2-5.6-0.7v-16c0-1.5,0.1-2.9,0.5-4.3c0.3-1.3,0.8-2.5,1.5-3.5
+	c0.7-1,1.5-1.8,2.6-2.4c1.1-0.6,2.4-0.9,3.9-0.9c1.6,0,3,0.3,4.1,1c1.1,0.7,2,1.6,2.8,2.7c0.7,1.2,1.2,2.5,1.5,4.2
+	c0.3,1.6,0.5,3.4,0.5,5.2C242.9,475.9,241.9,479.5,239.9,482 M251.3,452.6c-1.7-2-3.7-3.4-6-4.4c-2.3-1-4.7-1.5-7.3-1.5
+	c-1.7,0-3.3,0.2-4.6,0.7c-1.4,0.5-2.7,1.1-3.8,1.8c-1.1,0.7-2.1,1.6-2.9,2.5c-0.8,0.9-1.5,1.9-2,2.9c-0.1-0.4-0.1-1-0.2-1.6
+	c-0.1-0.6-0.2-1.3-0.4-2c-0.1-0.7-0.3-1.3-0.5-1.9c-0.1-0.6-0.3-1-0.5-1.3c-1.8-0.4-3.5-0.5-5.2-0.5c-1,0-2,0-2.8,0.1
+	c-0.8,0.1-1.7,0.2-2.5,0.4v68.8c1.1,0.2,2.3,0.3,3.3,0.4c1.1,0.1,2.1,0.1,3.1,0.1c1,0,2.1,0,3.1-0.1c1.1-0.1,2.2-0.2,3.3-0.4v-21
+	c0.7,0.1,1.5,0.2,2.5,0.3c1,0.1,2,0.1,3.1,0.1c4,0,7.6-0.6,10.8-1.8c3.2-1.2,5.8-2.9,8-5.1c2.2-2.2,3.9-4.8,5-8
+	c1.2-3.1,1.7-6.7,1.7-10.6c0-4.1-0.5-7.6-1.4-10.6C254.3,457,253,454.6,251.3,452.6"></path>
+<path fill="#C0C0C0" d="M284.9,485.3c-0.7,0.1-1.5,0.3-2.4,0.4c-0.9,0.2-1.8,0.2-2.7,0.2c-0.8,0-1.7,0-2.8-0.1
+	c-1.1-0.1-2.1-0.3-3-0.7c-0.9-0.4-1.8-1-2.4-1.9c-0.7-0.8-1-2.1-1-3.6c0-2.4,0.9-4.1,2.6-5.2c1.7-1.1,4.1-1.6,7.1-1.6
+	c0.7,0,1.4,0,2.3,0.1c0.9,0.1,1.6,0.2,2.4,0.3V485.3z M277.3,446.7c-2.3,0-4.8,0.2-7.5,0.6c-2.7,0.4-5.3,1.1-8,2
+	c0,1.9,0.2,3.6,0.7,5c0.4,1.4,1.1,2.9,1.9,4.5c3.7-1.3,7.2-1.9,10.5-1.9c1.5,0,2.9,0.1,4.1,0.3c1.2,0.2,2.3,0.5,3.1,1.1
+	c0.9,0.5,1.5,1.2,2,2.1c0.5,0.9,0.7,2.1,0.7,3.5v1.1c-2.1-0.2-4.1-0.3-5.8-0.3c-2.4,0-4.9,0.3-7.3,0.8c-2.4,0.5-4.6,1.4-6.6,2.6
+	c-2,1.2-3.6,2.8-4.8,4.7c-1.2,2-1.9,4.4-1.9,7.3c0,2.9,0.5,5.4,1.5,7.4c1,2,2.4,3.6,4.3,4.9c1.9,1.3,4.1,2.2,6.6,2.7
+	c2.6,0.5,5.4,0.8,8.5,0.8c3.8,0,7.3-0.3,10.3-0.9c3-0.6,5.6-1.2,7.7-1.9v-27.3c0-6.7-1.8-11.6-5.3-14.6
+	C288.5,448.2,283.6,446.7,277.3,446.7"></path>
+<path fill="#C0C0C0" d="M331.3,447.6c-0.4-0.1-1-0.2-1.7-0.3c-0.8-0.1-1.5-0.1-2.1-0.1c-2.9,0-5.3,0.7-7.3,2.2
+	c-1.9,1.5-3.6,3.2-4.9,5c-0.1-0.4-0.1-1-0.2-1.6c-0.1-0.6-0.2-1.3-0.3-1.9c-0.1-0.6-0.3-1.2-0.4-1.8c-0.2-0.6-0.3-1-0.5-1.3
+	c-0.9-0.2-1.7-0.3-2.6-0.5c-0.9-0.1-1.8-0.2-2.7-0.2c-1,0-1.9,0-2.7,0.1c-0.8,0.1-1.7,0.2-2.6,0.4V495c1.2,0.2,2.3,0.3,3.3,0.4
+	c1.1,0.1,2.1,0.1,3.1,0.1c1,0,2.1,0,3.2-0.1c1.1-0.1,2.2-0.2,3.3-0.4v-22.4c0-3.3,0.4-5.8,1.1-7.7c0.8-1.8,1.7-3.2,2.9-4.1
+	c1.2-0.9,2.4-1.5,3.7-1.7c1.3-0.2,2.4-0.3,3.5-0.3h1.5c0.8,0,1.6,0.1,2.2,0.2c0.2-1.1,0.4-2.2,0.5-3.5c0.1-1.2,0.1-2.3,0.1-3.4
+	c0-0.9,0-1.7-0.1-2.5C331.5,448.9,331.4,448.2,331.3,447.6"></path>
+<path fill="#C0C0C0" d="M334.9,428.3v66.6c2.1,0.4,4.2,0.5,6.4,0.5c2.2,0,4.3-0.2,6.5-0.5v-66.6c-2.1-0.4-4.3-0.5-6.5-0.5
+	C339.1,427.7,336.9,427.9,334.9,428.3"></path>
+<path fill="#C0C0C0" d="M375.2,447.8c-2.2-0.4-4.4-0.5-6.7-0.5c-2.4,0-4.8,0.2-7.2,0.5l-11.7,22.4l13.7,24.7
+	c2.4,0.4,4.6,0.5,6.7,0.5c2.3,0,4.7-0.2,7.2-0.5l-14-25.3L375.2,447.8z"></path>
+<path fill="#C0C0C0" d="M421.8,482.5c-2.1,0.7-4,1.2-5.7,1.6c-1.7,0.3-3.7,0.5-5.9,0.5c-12.6,0-18.9-7.4-18.9-22.2
+	c0-7.5,1.6-13.1,4.7-16.9c3.1-3.8,7.6-5.7,13.5-5.7c2.3,0,4.2,0.2,5.8,0.5c1.6,0.3,3.5,0.8,5.6,1.6c0.7-1.8,1.4-3.5,2-5.2
+	c0.6-1.7,1-3.5,1.1-5.3c-2.9-1.2-5.5-1.9-8-2.3c-2.5-0.4-5.1-0.5-8.1-0.5c-4.9,0-9.3,0.8-13.2,2.5c-3.9,1.7-7.1,4.1-9.8,7.1
+	c-2.6,3-4.7,6.6-6.1,10.8c-1.4,4.2-2.1,8.7-2.1,13.5c0,4.9,0.7,9.4,2,13.5c1.3,4.1,3.3,7.7,6,10.7c2.7,3,5.9,5.3,9.8,7
+	c3.9,1.7,8.4,2.5,13.6,2.5c2.9,0,5.6-0.2,8.2-0.5c2.5-0.4,5.4-1.1,8.5-2.3c-0.2-1.8-0.6-3.6-1.1-5.4
+	C423.2,486,422.6,484.2,421.8,482.5"></path>
+<path fill="#C0C0C0" d="M467,473.3c-1,2.9-2.4,5.1-4.2,6.8c-1.8,1.7-3.8,2.9-6.2,3.5c-2.4,0.6-5,1-7.8,1c-1.2,0-2.2,0-3.1-0.1
+	c-0.9-0.1-1.6-0.1-2.1-0.2v-44.3c0.8-0.1,1.8-0.2,3-0.2c1.1,0,2.1,0,3,0c2.5,0,5,0.3,7.2,1c2.3,0.7,4.3,1.9,6.1,3.6
+	c1.8,1.7,3.2,4,4.2,6.9c1,2.9,1.6,6.6,1.6,10.9C468.6,466.8,468.1,470.5,467,473.3 M447.6,428.3c-3.4,0-6.5,0.1-9.3,0.3
+	c-2.8,0.2-5.5,0.5-8,0.8v65.5c2.6,0.3,5.1,0.6,7.7,0.8c2.6,0.2,5.5,0.3,8.6,0.3c12,0,21-2.7,27.1-8.1c6.1-5.4,9.1-13.8,9.1-25.3
+	c0-11.4-3-20-9-25.7C467.8,431.2,459,428.3,447.6,428.3"></path>
+<path fill="#C0C0C0" d="M523.2,429.4v41.7l-25.3-41.7c-1.9-0.4-3.8-0.5-5.6-0.5c-1.7,0-3.5,0.2-5.4,0.5v65.5
+	c1.9,0.4,3.8,0.5,5.8,0.5c2,0,4-0.2,5.9-0.5v-41.6l25.5,41.6c2,0.4,3.9,0.5,5.6,0.5c1.6,0,3.3-0.2,5.3-0.5v-65.5
+	c-1.8-0.4-3.6-0.5-5.5-0.5C527.5,428.8,525.4,429,523.2,429.4"></path>
+</svg></a>
+
+        <a href="http://habrahabr.ru/users/maxelc/#" class="scroll_to_up hidden scroll_to_up_for_guest" id="scroll_to_top" title="Наверх"></a>
+    </div>
+    <div class="nav_tabs_content ">
+
+        <div class="nav_tab hidden" id="menu_tab">
+            <div class="title">Разделы</div>
+            <form action="http://habrahabr.ru/search/" method="get" class="global_search_form">
+                <div>
+                    <input type="text" name="q" placeholder="Поиск">
+                </div>
+            </form>
+            <div class="menu">
+                <a href="http://habrahabr.ru/posts/top/">Публикации</a>
+                <a href="http://habrahabr.ru/hubs/">Хабы</a>
+                <a href="http://habrahabr.ru/companies/">Компании</a>
+                <a href="http://habrahabr.ru/users/">Пользователи</a>
+                <a href="http://toster.ru/" class="new_window">Q&amp;A</a>
+                <a href="http://habrahabr.ru/sandbox/">Песочница</a>
+                <a href="http://habrahabr.ru/exchange/">Биржа авторов</a>
+
+
+
+            </div>
+
+                
+
+                        <div class="line"></div>
+                        <div class="title">Спецпроекты</div>
+                        <div class="menu">
+
+                        <a href="http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=482836&bt=21&pid=1730497&bid=3502321&bn=3502321&rnd=124687018" target="_blank">AZURE бесплатно</a>
+
+                        <a href="http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=506846&bt=21&pid=1853254&bid=3754276&bn=3754276&rnd=190963099" target="_blank">Простое SEO</a>
+
+                        <a href="http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=506857&bt=21&pid=1922763&bid=3788776&bn=3788776&rnd=1982268568" target="_blank">Up To Like</a>
+                        </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+      <div class="inner">
+        
+
+        
+
+        	
+	<div class="user_header">
+
+	<a class="avatar" href="http://habrahabr.ru/users/MaxElc/"><img src="./habr_files/b876662576eda821f9b27b7fa330e783.png" alt="avatar"></a>
+	<h2 class="username"><a href="http://habrahabr.ru/users/MaxElc/">MaxElc</a></h2>
+
+
+
+	<div class="karma">
+		<div class="label">карма</div>
+		<div class="score">
+				
+
+				<div class="num">99,7</div>
+
+				
+		</div>
+		<div class="votes">143 голоса</div>
+	</div>
+	<div class="rating">
+		<div class="label">рейтинг</div>
+		<div class="num">10,0</div>
+	</div>
+
+
+	<div class="clear"></div>
+</div>
+	
+
+	<div class="content_left">
+
+		 
+
+
+
+
+
+<table class="menu">
+  <tbody><tr>
+      <td class="item  active">
+        	<a href="./habr_files/habr.htm"><span class="name">Профиль</span></a>
+      </td>
+      <td class="item ">
+        	<a href="http://habrahabr.ru/users/maxelc/topics/"><span class="name">Публикации (<span class="count">17</span>)</span></a>
+      </td>
+      <td class="item ">
+        	<a href="http://habrahabr.ru/users/maxelc/comments/"><span class="name">Комментарии (<span class="count">137</span>)</span></a>
+      </td>
+      <td class="item ">
+        	<a href="http://habrahabr.ru/users/maxelc/favorites/"><span class="name">Избранное (<span class="count">2</span>)</span></a>
+      </td>
+  </tr>
+</tbody></table>
+<div class="submenu ">
+</div>
+<div class="clear"></div>
+
+
+		 
+		<div class="user_profile">
+		
+				<!-- USER PROFILE -->
+				
+					<div class="fullname">Макс Креминский
+					</div>
+					
+						
+						<div class="rating-place">1108-й  в <a href="http://habrahabr.ru/users/">рейтинге</a> пользователей</div>
+						
+						
+					
+						
+
+			
+					
+					
+					<dl>
+						<dt>Дата рождения:</dt>
+						<dd class="bday">15 мая 1989</dd>
+					</dl>
+				
+					<dl>
+						<dt>Откуда:</dt>
+						<dd>
+							<a class="country-name" href="http://habrahabr.ru/users/?country=168">Россия</a>
+						</dd>
+					</dl>
+					
+						<dl>
+							<dt>Значки:</dt>
+							<dd>
+								<ul id="people-tags">
+									<li>
+									 
+									 <a title="Пользователь с кармой &gt;0." class="habred"><span>Захабренный</span></a>
+									</li>
+									<li>
+									 
+									 <a title="Пользователь, зарегистрированный более 3-х лет назад, с кармой больше 50." class="oldresident"><span>Старожил</span></a>
+									</li>
+								</ul>
+
+							</dd>
+						</dl>
+				
+					<!-- Описание самого себя, оставленное самим пользователем -->
+					<!-- // Описание самого себя, оставленное самим пользователем -->
+					
+			
+						<dl id="favorite_companies_list" class="companies_list">
+								<dt>Подписан на:</dt>
+							<dd>
+								<ul class="grey" id="fav_companies_data_items">
+									<li class=""><a href="http://habrahabr.ru/company/webasyst/">Webasyst</a></li>
+								</ul>
+														</dd>
+						</dl>
+			
+						<dl id="working_in" class="companies_list">
+							<dt>Работаю:</dt>
+							<dd>
+								<ul class="grey">
+									<li><a rel="me" href="http://habrahabr.ru/company/webasyst/">Webasyst</a></li>
+								</ul>
+							</dd>
+						</dl>  
+					
+					
+
+					
+					
+					
+						<dl class="hubs_list">				
+							<dt>Состоит в:</dt>
+							<dd>
+								<ul class="grey" id="hubs_data_items">
+									<li class=""><a class="" href="http://habrahabr.ru/hub/nix/">*nix</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/net/">.NET</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/bitrix/">1С-Битрикс</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/api/">API</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/asp/">ASP</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/accessibility/">Accessibility</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/action_script/">Action Script</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/AJAX/">Ajax</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/aws/">Amazon Web Services</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/angularjs/">AngularJS</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/apache/">Apache</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/arduino/">Arduino</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/asm/">Assembler</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/Asterisk/">Asterisk</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/bigdata/">Big Data</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/Bitbucket/">Bitbucket</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/brainfuck/">Brainfuck</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/c/">C</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/csharp/">C#</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/cpp/">C++</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/cad_cam/">CAD/CAM</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/cms/">CMS</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/crm/">CRM-системы</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/css/">CSS</a></li>
+									<li class=""><a class="" href="http://habrahabr.ru/hub/cakephp/">CakePHP</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/canvas/">Canvas</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/cisconetworks/">Cisco</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Cobol/">Cobol</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Cocoa/">Cocoa</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/codeigniter/">CodeIgniter</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/creative_commons/">Creative Commons</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/cubrid/">Cubrid</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/d/">D</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/DIY/">DIY или Сделай Сам</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/DNS/">DNS</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Dart/">Dart</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/data_mining/">Data Mining</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/delphi/">Delphi</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/derbyjs/">Derby.js</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/django/">Django</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/doctrine/">Doctrine ORM</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/drupal/">Drupal</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ecm/">ECM/СЭД</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/erp/">ERP-системы</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/eclipse/">Eclipse</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/emacs/">Emacs</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/erlang/">Erlang/OTP</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/fpga/">FPGA</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/facebook_api/">Facebook API</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/fido/">Fidonet</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Firebird/">Firebird/Interbase</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/firefox/">Firefox</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Flash_Platform/">Flash-платформа</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/flex/">Flex</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/forth/">Forth</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Fortran/">Fortran</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/GPGPU/">GPGPU</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/gps/">GPS</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/gtk/">GTK+</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/gdev/">Game Development</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Git/">Git</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/github/">GitHub</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/go/">Go</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/google_api/">Google API</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/gae/">Google App Engine</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/google_chrome/">Google Chrome</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/gwt/">Google Web Toolkit</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/GreaseMonkey/">GreaseMonkey</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/groovy_grails/">Groovy &amp; Grails</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/html5/">HTML</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Haskell/">Haskell</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/helpdesk/">Help Desk Software</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/i2p/">I2P</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/iis/">IIS</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/im/">IM</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/infolust/">INFOLUST</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/IPTV/">IPTV</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ipv6/">IPv6</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/itstandarts/">IT-стандарты</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ie/">Internet Explorer</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/java/">JAVA</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/javascript/">JavaScript</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/joomla/">Joomla</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/julia/">Julia</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/kohanaphp/">Kohana</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/latex/">LaTeX</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/LabVIEW/">LabVIEW</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/laravel/">Laravel</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/lisp/">Lisp</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/livestreet/">LiveStreet</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Lua/">Lua</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/modx/">MODX</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/map_api/">Maps API</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/mediawiki/">Mediawiki</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Mercurial/">Mercurial</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/mesh_networking/">Mesh-сети</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/meteorjs/">Meteor.JS</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ms_access/">Microsoft Access</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/azure/">Microsoft Azure</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/mssql/">Microsoft SQL Server</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/mobiledev/">Mobile Development</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/MongoDB/">MongoDB</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/mono/">Mono и Moonlight</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/mootools/">MooTools</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/mysql/">MySQL</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/nginx/">Nginx</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/nosql/">NoSQL</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/nodejs/">Node.JS</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ObjectiveC/">Objective C</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/open_source/">Open source</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/openstreetmap/">OpenStreetMap</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/opera/">Opera</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/oracle/">Oracle</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/pdf/">PDF</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/php/">PHP</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/p2p/">Peer-to-Peer</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/perl/">Perl</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/postgresql/">PostgreSQL</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/powershell/">PowerShell</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/prolog/">Prolog</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/python/">Python</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/qt_software/">Qt</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/r/">R</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/raspberrypi/">Raspberry Pi</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ruby/">Ruby</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ror/">Ruby on Rails</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/rust/">Rust</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/san/">SAN</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/scada/">SCADA</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/sql/">SQL</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/sqlite/">SQLite</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/saas/">SaaS / S+S</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/safari/">Safari</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/scala/">Scala</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/sharepoint/">SharePoint</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/silverlight/">Silverlight</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/skype/">Skype</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/smallbasic/">Small Basic</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/smalltalk/">Smalltalk</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/sphinx/">Sphinx</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/Swift/">Swift</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/symfony/">Symfony</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/tdd/">TDD</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/twisted/">Twisted</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/twitter_api/">Twitter API</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/uml/">UML Design</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/unity3d/">Unity3D</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/usability/">Usability</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/vim/">VIM</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/vs/">Visual Studio</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/webgl/">WebGL</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/wiki/">Wiki-технология</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/wordpress/">WordPress</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/xml/">XML</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/xslt/">XSLT</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/xcode/">Xcode</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/yii/">Yii</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/zend_framework/">Zend Framework</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/jquery/">jQuery</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/db_admins/">Администрирование баз данных</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/algorithms/">Алгоритмы</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/sysan4dummies/">Анализ и проектирование систем</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/wireless/">Беспроводные технологии</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/extjs/">Библиотека ExtJS/Sencha</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/browsers/">Браузеры</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/web_design/">Веб-дизайн</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/webdev/">Веб-разработка</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/svg/">Векторная графика</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/devmail/">Верстка писем</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/data_visualization/">Визуализация данных</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/virtualization/">Виртуализация</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/virus/">Вирусы и антивирусы</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/vkontakte_api/">Вконтакте API</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/data_recovery/">Восстановление данных</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/hi/">Высокая производительность</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/glonass/">ГЛОНАСС</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/geo/">Геоинформационные сервисы</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/desktop_environment/">Графические оболочки</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/domains/">Домены</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/zadachki/">Занимательные задачки</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/it-infrastructure/">ИТ-инфраструктура</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ui/">Интерфейсы</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/infosecurity/">Информационная безопасность</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/client_side_optimization/">Клиентская оптимизация</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/code_wtf/">Кодобред</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/compilers/">Компиляторы</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/crypto/">Криптография</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/maths/">Математика</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/microformats/">Микроформаты</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/mobile/">Мобильный веб</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/linux/">Настройка Linux</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/crazydev/">Ненормальное программирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/oop/">ООП</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/cloud_computing/">Облачные вычисления</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/shells/">Оболочки</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/image_processing/">Обработка изображений</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/opendata/">Открытые данные</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/debug/">Отладка</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/parallel_programming/">Параллельное программирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/pay_system/">Платежные системы</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/search_engines/">Поисковые машины и технологии</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/programming/">Программирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/controllers/">Программирование микроконтроллеров</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/refactoring/">Проектирование и рефакторинг</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/industrial_control_system/">Промышленное программирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/lib/">Профессиональная литература</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/3d_graphics/">Работа с анимацией и 3D-графикой</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/video/">Работа с видео</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/iconoskaz/">Работа с иконками</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/sound_and_music/">Работа со звуком</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/development/">Разработка</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/iot_dev/">Разработка для интернета вещей</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/android_dev/">Разработка под Android</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/bada_dev/">Разработка под Bada</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/javame_dev/">Разработка под Java ME</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/osx_dev/">Разработка под OS X</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/tizen_dev/">Разработка под Tizen</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/windows_dev/">Разработка под Windows</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/wp_dev/">Разработка под Windows Phone</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ecommerce_development/">Разработка под e-commerce</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/ios_dev/">Разработка под iOS</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/netdev/">Разработка систем связи</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/browser_extensions/">Расширения для браузеров</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/reverse-engineering/">Реверс-инжиниринг</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/regex/">Регулярные выражения</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/backup/">Резервное копирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/sw/">Семантика</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/server_side_optimization/">Серверная оптимизация</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/s_admin/">Серверное администрирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/network_technologies/">Сетевые технологии</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/data_compression/">Сжатие данных</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/sys_admin/">Системное администрирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/system_programming/">Системное программирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/cvs/">Системы управления версиями</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/complete_code/">Совершенный код</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/spam/">Спам и антиспам</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/sport_programming/">Спортивное программирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/network_standarts/">Стандарты связи</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/terminator/">Терминология IT</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/it_testing/">Тестирование IT-систем</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/web_testing/">Тестирование веб-сервисов</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/game_testing/">Тестирование игр</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/mobile_testing/">Тестирование мобильных приложений</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/typography/">Типографика</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/funcprog/">Функциональное программирование</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/habr/">Хабрахабр</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/habrahabr_api/">Хабрахабр API</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/announcements/">Хабрахабр — Анонсы</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/hackathons/">Хакатоны</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/hosting/">Хостинг</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/dwh/">Хранение данных</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/closet/">Чулан</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/easyelectronics/">Электроника для начинающих</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/i_am_advertising/">Я пиарюсь</a></li>
+									<li class="hidden"><a class="" href="http://habrahabr.ru/hub/yandex_api/">Яндекс API</a></li>
+										<li class="no_icon"><a href="" class="showmore_items dotted" data-type="hubs_data">показать все</a></li>
+								</ul>
+								
+							</dd>
+						</dl>
+				
+					<dl>
+						<dt>
+							Зарегистрирован:
+						
+						</dt>
+						<dd class="grey">31 августа 2007 в  18:02
+						</dd>
+					</dl>
+					
+					 <dl class="friends_list">
+						<dt>
+							Пригласил на&nbsp;сайт:
+						</dt>
+						<dd>
+							<ul class="grey" id="invited_data_items">
+								<li class=""><a rel="friend" href="http://habrahabr.ru/users/AntonShcherbinin/">AntonShcherbinin</a></li>
+								<li class=""><a rel="friend" href="http://habrahabr.ru/users/Hexer/">Hexer</a></li>
+								<li class=""><a rel="friend" href="http://habrahabr.ru/users/Kophejnick/">Kophejnick</a></li>
+								<li class=""><a rel="friend" href="http://habrahabr.ru/users/gravizappa/">gravizappa</a></li>
+								<li class=""><a rel="friend" href="http://habrahabr.ru/users/kefirux/">kefirux</a></li>
+								<li class=""><a rel="friend" href="http://habrahabr.ru/users/km999/">km999</a></li>
+							</ul>
+						</dd>
+					</dl>
+					
+					<dl>
+						<dt>Активность:</dt>
+						<dd>
+								Последний раз был на сайте 26 марта 2015 в  00:04
+						</dd>
+					</dl>
+				
+				<!-- END USER PROFILE -->
+	
+		</div>
+	</div>
+	<div class="sidebar_right">
+			
+			
+<div class="block user_info">
+  <div class="title">Информация о пользователе</div>
+  <div class="info">
+
+    <div class="stats">
+
+
+      <div class="item posts_count"><a href="http://habrahabr.ru/users/MaxElc/topics/">17 публикаций</a></div>
+			
+
+      <div class="item comments_count"><a href="http://habrahabr.ru/users/MaxElc/comments/">137 комментариев</a></div>
+			
+
+      <div class="item followers_count" id="followers_count">
+          <a href="http://habrahabr.ru/users/MaxElc/subscription/followers/">39 подписчиков</a>
+
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
+
+    <div class="block top_hub_invest">
+        <div class="title">Вклад в хабы</div>
+        <table class="users">
+            <tbody><tr>
+                <th class="">Хаб</th>
+                <th></th>
+                <th class="rating">Вклад</th>
+            </tr>
+
+                    <tr class="user top_1">
+                        <td class="userinfo">
+                            <div class="username">
+                                <div class="hub_name"><a href="http://habrahabr.ru/hub/programming/" class="grey">Программирование</a></div>
+                                <div class="bar" style="width:100%;"></div>
+                            </div>
+                        </td>
+                        <td class="">&nbsp;</td>
+                        <td class="h_rating">481,0</td>
+                    </tr>
+
+        </tbody></table>
+    </div>
+
+	</div>
+	<div class="clear"></div>
+
+
+
+        
+        
+
+
+        <div class="clear"></div>
+
+        <div class="footer_panel">
+          <div id="footer">
+	<dl>
+		<dd><a href="https://habrahabr.ru/auth/login/">Войти</a></dd>
+		<dd><a href="https://habrahabr.ru/auth/register/">Регистрация</a></dd>
+	</dl>
+	<dl>
+		<dt>Разделы</dt>
+		<dd><a href="http://habrahabr.ru/posts/top/">Публикации</a></dd>
+		<dd><a href="http://habrahabr.ru/hubs/">Хабы</a></dd>
+		<dd><a href="http://habrahabr.ru/companies/">Компании</a></dd>
+		<dd><a href="http://habrahabr.ru/users/">Пользователи</a></dd>
+		<dd><a href="http://toster.ru/?_aa=press_anykey">Q&amp;A</a></dd>
+		<dd><a href="http://habrahabr.ru/sandbox/">Песочница</a></dd>
+		
+	</dl>	
+	<dl>
+		<dt>Инфо</dt>
+		<dd><a href="http://habrahabr.ru/info/about/">О сайте</a></dd>
+		<dd><a href="http://habrahabr.ru/info/help/rules/">Правила</a></dd>
+		<dd><a href="http://habrahabr.ru/info/help/">Помощь</a></dd>
+		<dd><a href="http://habrahabr.ru/info/agreement/">Соглашение</a></dd>
+	</dl>
+	<dl>
+		<dt>Услуги</dt>
+		<dd><a href="http://special.habrahabr.ru/advertising/">Реклама</a></dd>
+        <dd><a href="http://special.habrahabr.ru/">Спецпроекты</a></dd>
+        <dd><a href="http://special.habrahabr.ru/corporate/">Тарифы</a></dd>
+        <dd><a href="http://special.habrahabr.ru/content/">Контент</a></dd>
+        <dd><a href="http://special.habrahabr.ru/workshops/">Семинары</a></dd>
+	</dl>
+	<dl>
+		<dt>Разное</dt>
+		<dd><a href="http://habrahabr.ru/apps/">Приложения</a></dd>
+		<dd><a href="http://habrahabr.ru/special/testdrive/">Тест-драйвы</a></dd>
+		<dd><a href="http://special.habrahabr.ru/hello_startup/habrahabr/">Помощь стартапам</a></dd>
+	</dl>
+	<div class="copyright">
+
+		<div class="about">
+			<a href="http://tmtm.ru/">© TM</a>
+			
+			<br><br>
+			<a href="http://habrahabr.ru/feedback/">Служба поддержки</a><br><br>
+			    <a href="http://m.habrahabr.ru/?mobile=yes">Мобильная версия</a><br><br>
+			
+
+			<div class="social_accounts">
+				<a href="https://twitter.com/habrahabr" class="tw"></a>
+				<a href="https://www.facebook.com/habrahabr.ru" class="fb"></a>
+				<a href="http://vk.com/habr" class="vk"></a>
+				<!-- <a href="" class="gp"></a> //-->
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+
+
+      <script type="text/javascript" src="./habr_files/jquery.cookie.js"></script>
+      <script type="text/javascript">
+        $(document).ready( function(){
+          window.tmidLogin = function(){ return false; };
+          if( $.cookie('tmid_no_check') == undefined ) {
+            var expire = new Date();
+            expire.setMinutes(expire.getMinutes() + 10 );
+            $.cookie('tmid_no_check', 1, { expires: expire } );
+            $.getScript("https://id.tmtm.ru/checklogin/", function(){
+              if( window.tmidLogin() ) {
+
+                  var href = $('#login').attr('href');
+
+                  if( href !== undefined ) {
+                      window.location.href = href;
+                  }
+              }
+            });
+          }
+        });
+      </script>
+
+    <script type="text/javascript">
+  // global vars
+  var g_base_url = 'habrahabr.ru';
+  var g_show_xpanel = false;
+  var g_base_fullurl = 'http://habrahabr.ru/';
+  var g_is_guest = false;
+</script> 
+
+      <script type="text/javascript" src="./habr_files/shortcuts.js"></script>
+
+    <script type="text/javascript" src="./habr_files/global_footer_main.js"></script>
+
+    
+    
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter24049213 = new Ya.Metrika({id:24049213,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/24049213" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<!-- adriver counter //-->
+<span style="position:absolute;left:-9999px;">
+  <img src="./habr_files/rle.cgi" width="1" height="1" alt="">
+</span>
+<!-- adriver counter end //-->
+
+
+    
+
+    <!-- Хабр не резиновый! -->
+  
+
+<div id="AutocompleteContainter_b90ba" style="position: absolute; z-index: 9999; top: 0px; left: 0px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_b90ba" style="display: none; width: 300px; max-height: 400px;"></div></div></div><div id="feedly-mini" title="feedly Mini tookit"></div></body></html>
