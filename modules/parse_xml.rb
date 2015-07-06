@@ -92,6 +92,10 @@ module XML
 			end
 		end
 
+		def eql?(name)
+			get_vl_name == name
+		end
+
 
 		def get_device_name			
 			if @system == "АСУ ТП"
@@ -157,15 +161,7 @@ module XML
 			@doc 	= file.get_doc
 			@model 	= model
 		end				
-	
-		def expression
-			"Subject/Apartment/SystemModel/Model/Groups"
-		end
-	
-		def get_nodes(xml)
-			xml.xpath(expression)
-		end
-		
+			
 		def get_ready_model
 			doc_template = @doc.root.children.at_css('Apartment/SystemModel/Model/Groups') 
 
@@ -197,13 +193,6 @@ module XML
 		  		end
 			end
 		end
-
-		def show_changes_in_doc(doc)
-			get_nodes(doc).each do |group|															
-					group = group.at_css('Groups/Name').content					
-					p "#{group}" unless group.empty?
-			end
-		end		
 
 	end
 
@@ -309,18 +298,14 @@ module XML
 			end
 
 			def get_device_group(vl_group)
-				group = @variables.map { |variable| create_device_group(variable, vl_group) }.compact
+				group = @variables.map { |variable| create_device(variable) if variable.eql?(vl_group[:name]) }.compact
 				
 				num = 1
 				group.each do |device|					
 					device[:group][0][:name] = change_device_name(device[:group][0][:name], num)
 					num += 1
 				end				
-			end
-	
-			def create_device_group(variable, vl_group)
-				create_device(variable) if vl_group[:name] == variable.get_vl_name
-			end
+			end			
 	
 			def create_device(variable)			
 				group 				= 	{ 	group: [] }
@@ -348,11 +333,11 @@ variables = XML::Variables.new(file_variables).variables
 
 model_helper = XML::ModelHelper.new(variables).prepare_model
 
-#model_helper.each {|elem| p elem}
+model_helper.each {|elem| p elem}
 
 #link_variables = XML::ModelLinker.new(model_helper, file_variables).link
 
 #file_variables.write_document_to_xml link_variables
 
-equip_model = XML::EquipModel.new(model_helper, file_equipmodel).building_list
-file_equipmodel.write_document_to_xml equip_model
+#equip_model = XML::EquipModel.new(model_helper, file_equipmodel).building_list
+#file_equipmodel.write_document_to_xml equip_model
