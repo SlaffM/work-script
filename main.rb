@@ -29,4 +29,4 @@ vars.errors.each {|er| p er}
 #equip_model = XML::EquipModel.new(model_helper, file_equipmodel).get_ready_model
 #file_equipmodel.write_document_to_xml equip_model
 
-#изменено #2
+#изменено #3
