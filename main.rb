@@ -24,4 +24,4 @@ model_helper.each {|elem| p elem}
 #equip_model = XML::EquipModel.new(model_helper, file_equipmodel).get_ready_model
 #file_equipmodel.write_document_to_xml equip_model
 
-#изменено
+#изменено #2
