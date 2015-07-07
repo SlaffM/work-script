@@ -11,11 +11,11 @@ file_variables = XML::XML.new("C:/Users/modzhuk_vv/Desktop/1.XML")
 
 variables = XML::Variables.new(file_variables).variables
 
-#variables.each {|elem| p elem}
+variables.each {|elem| p elem}
 
-model_helper = XML::ModelHelper.new(variables).prepare_model
+#model_helper = XML::ModelHelper.new(variables).prepare_model
 
-model_helper.each {|elem| p elem}
+#model_helper.each {|elem| p elem}
 
 #XML::ModelLinker.new(model_helper, file_variables).link
 
