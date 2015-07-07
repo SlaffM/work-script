@@ -1,14 +1,10 @@
 
+group = {childgroups: []}
 
-vl_groups = {childgroups: ""}
+list = [1,2,3,4,5,6]
 
-variables = [1,2,3,4,5,6,7,8,9,10]
+group[:childgroups] = list.find_all do |num|
+			num if num < 3
+		end
 
-vl_groups[:childgroups] = variables.map do |variable|				
-
-	"#{variable} _ "	if variable == 3					
-
-end
-
-
-p vl_groups
+p group

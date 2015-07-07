@@ -63,32 +63,18 @@ module XML
 		end	
 
 		def clear_mip_tag(tag)	
-			if tag.include?("МИП")
-				tag[/\(.{1,}\)/].gsub(/\(|\)/, '')
-			else
-				tag
-			end
+			tag.include?("МИП") ? tag[/\(.{1,}\)/].gsub(/\(|\)/, '') : tag
 		end
 
 		def is_variable_ready?
 			!@variable_name.start_with?("INT.") && @variable_name.include?("!") && @variable_name.end_with?(".P")
 		end
 
-		def get_vl_name			
-			if @system == "МПРЗА"
-				if @symbaddr.include?("MD") 
-					"#{@voltage_level} #{@vl_name} #{@ka_name}"
-				else
-					"#{@voltage_level} #{@vl_name}"
-				end
-			elsif @system == "АСУ ТП"
-				if @ka_name.include?("ВЛ") 
-					"#{@voltage_level} #{@vl_name}"
-				else
-					"#{@voltage_level} #{@vl_name} #{@ka_name}"
-				end
-			else
-				"Undefine"
+		def get_vl_name	
+			case @system
+			when "МПРЗА" then @symbaddr.include?("MD") ? "#{@voltage_level} #{@vl_name} #{@ka_name}" : "#{@voltage_level} #{@vl_name}"
+			when "АСУ ТП" then @ka_name.include?("ВЛ") ? "#{@voltage_level} #{@vl_name}" : "#{@voltage_level} #{@vl_name} #{@ka_name}"
+			else "Undefine"			
 			end
 		end
 
@@ -97,13 +83,11 @@ module XML
 		end
 
 
-		def get_device_name			
-			if @system == "АСУ ТП"
-				"МИП"
-			elsif @system == "МПРЗА"
-				"РЗА"
-			else
-				"Undefine"
+		def get_device_name	
+			case @system
+			when "АСУ ТП" then "МИП"
+			when "МПРЗА" then "РЗА"
+			else "Undefine"
 			end
 		end
 
@@ -187,7 +171,7 @@ module XML
 		end
 		
 		def builder_xml_from_model
-			builder = Nokogiri::XML::Builder.new do |xml|
+			Nokogiri::XML::Builder.new do |xml|
 		  		xml.root do                           # Wrap everything in one element.
 		    		process_array('group', @model, xml)  # Start the recursion with a custom name.
 		  		end
@@ -323,21 +307,22 @@ module XML
 end
 
 
-file_variables = XML::XML.new(File.expand_path "../../files/xml/1.XML", __FILE__)
-file_equipmodel = XML::XML.new(File.expand_path "../../files/xml/template_equipmodel.xml", __FILE__)
+
+#file_variables = XML::XML.new("C:/Users/modzhuk_vv/Desktop/1.XML")
+#file_equipmodel = XML::XML.new(File.expand_path("../../files/xml/template_equipmodel.xml", __FILE__))
 
 
-variables = XML::Variables.new(file_variables).variables
+#variables = XML::Variables.new(file_variables).variables
 
 #variables.each {|elem| p elem}
 
-model_helper = XML::ModelHelper.new(variables).prepare_model
+#model_helper = XML::ModelHelper.new(variables).prepare_model
 
-model_helper.each {|elem| p elem}
+#model_helper.each {|elem| p elem}
 
-#link_variables = XML::ModelLinker.new(model_helper, file_variables).link
+#XML::ModelLinker.new(model_helper, file_variables).link
 
-#file_variables.write_document_to_xml link_variables
+#file.write_document_to_xml model
 
-#equip_model = XML::EquipModel.new(model_helper, file_equipmodel).building_list
+#equip_model = XML::EquipModel.new(model_helper, file_equipmodel).get_ready_model
 #file_equipmodel.write_document_to_xml equip_model
