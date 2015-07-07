@@ -5,13 +5,18 @@ require 'parse_xml'
 
 
 
-file_variables = XML::XML.new("C:/Users/modzhuk_vv/Desktop/1.XML")
+file_variables = XML::XML.new("C:/Users/modzhuk_vv/Desktop/bad_1.XML")
 #file_equipmodel = XML::XML.new(File.expand_path("../files/xml/template_equipmodel.xml", __FILE__))
 
 
-variables = XML::Variables.new(file_variables).variables
+vars = XML::Variables.new(file_variables)
 
-variables.each {|elem| p elem}
+vars.variables.each {|elem| p elem}
+
+vars.errors.each {|er| p er}
+
+
+
 
 #model_helper = XML::ModelHelper.new(variables).prepare_model
 
