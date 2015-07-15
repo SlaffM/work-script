@@ -9,11 +9,11 @@ file_variables = XML::XML.new("C:/Users/modzhuk_vv/Desktop/bad_1.XML")
 #file_equipmodel = XML::XML.new(File.expand_path("../files/xml/template_equipmodel.xml", __FILE__))
 
 
-vars = XML::Variables.new(file_variables)
+variables = XML::Variables.new(file_variables).variables
 
-vars.variables.each {|elem| p elem}
 
-vars.errors.each {|er| p er}
+
+
 
 
 
