@@ -55,9 +55,6 @@ module XML
 
 		end
 
-		
-
-
 		def create_headers(variable)			
 		
 			tag_name 			= variable[:tagname]			
@@ -101,7 +98,6 @@ module XML
 		def get_signal_short_name(name)
 			name.include?(".") ? name[name.rindex(".")+1..-1] : ""				
 		end
-
 
 		def clear_mip_tag(tag)	
 			tag.include?("МИП") ? tag[/\(.{1,}\)/].gsub(/\(|\)/, '') : tag.strip
@@ -209,12 +205,12 @@ module XML
 
 		def process_array(label,array,xml)
 			array.each do |hash|
-			    xml.send(label) do                 # Create an element named for the label
+			    xml.send(label) do                 					# Create an element named for the label
 			      hash.each do |key,value|
 			        if value.is_a?(Array)
-			          process_array(key,value,xml) # Recurse
+			          process_array(key,value,xml) 					# Recurse
 			        else			        	
-			          xml.send(key,value) unless key == :device         # Create <key>value</key> (using variables)
+			          xml.send(key,value) unless key == :device     # Create <key>value</key> (using variables)
 			        end
 			      end
 			    end
@@ -223,8 +219,8 @@ module XML
 		
 		def builder_xml_from_model
 			Nokogiri::XML::Builder.new do |xml|
-		  		xml.root do                           # Wrap everything in one element.
-		    		process_array('group', @model, xml)  # Start the recursion with a custom name.
+		  		xml.root do                           				# Wrap everything in one element.
+		    		process_array('group', @model, xml)  			# Start the recursion with a custom name.
 		  		end
 			end
 		end
@@ -254,12 +250,12 @@ module XML
 										}												
 						variable = Variable.new(variable_tag)
 						if vl_group[:name] == variable.get_long_vl_name
-							vl_group[:childgroups].each do |device_type|
-								if device_type[:group][:device] == variable.get_prefix_device_name
+							vl_group[:childgroups].each do |device_type|								
+								if device_type[:group][0][:device] == variable.get_prefix_device_name
 										variable_xml.at_css('SystemModelGroup').content = 
 											[
 												vl_group[:name], 
-												device_type[:group][:name],
+												device_type[:group][0][:name],
 												variable.signal_short_name
 											].join(".")
 									
