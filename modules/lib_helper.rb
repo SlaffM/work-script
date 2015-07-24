@@ -1,0 +1,16 @@
+#coding: UTF-8
+
+require 'json'
+require 'active_support'
+require 'nokogiri'
+require 'uri'
+require 'open-uri'
+require 'axlsx'
+require 'active_support/core_ext/hash'
+require 'active_support/core_ext/hash/conversions'
+require 'uuid'
+require 'Variables'
+require 'Variable'
+require 'Xml'
+require 'ModelHelper'
+require 'ModelLinker'
