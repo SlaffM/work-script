@@ -12,7 +12,7 @@ file_variables = XML::XML.new("C:/Users/modzhuk_vv/Desktop/bad_1.XML")
 variables = XML::Variables.new(file_variables).variables
 
 
-
+variables.each {|var| p var}
 
 
 
@@ -22,9 +22,9 @@ variables = XML::Variables.new(file_variables).variables
 
 #model_helper.each {|elem| p elem}
 
-#XML::ModelLinker.new(model_helper, file_variables).link
+#modellink = XML::ModelLinker.new(model_helper, file_variables).link
 
-#file.write_document_to_xml model
+#file_variables.write_document_to_xml modellink
 
 #equip_model = XML::EquipModel.new(model_helper, file_equipmodel).get_ready_model
 #file_equipmodel.write_document_to_xml equip_model

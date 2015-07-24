@@ -231,7 +231,7 @@ module XML
 
 		def initialize(model, file)
 			@model = model							
-			@doc = file.get_doc			
+			@doc = file.get_doc							
 		end
 
 		def link			
@@ -296,7 +296,8 @@ module XML
 		def initialize(variables)
 			@uuid = UUID.new
 			@variables = select_variables variables				
-			@list_groups = get_list_groups			
+			@list_groups = get_list_groups	
+					
 		end		
 
 		def prepare_model
