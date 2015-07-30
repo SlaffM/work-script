@@ -13,7 +13,7 @@ class Variables
 		@variables 	= build_variables_list
 	end	
 =begin
-			
+
 	def expression
 		"Subject/Apartment/Variable"
 	end
@@ -64,15 +64,15 @@ class Variables
 				for_element 'SymbAddr' do symbaddr_content = inner_xml end
 				for_element 'Tagname' do tagname_content = inner_xml end
 
-				if tagname_content.nil? || tagname_content.empty?
-					nil						
-				else
+				#if tagname_content.nil? || tagname_content.empty?
+				#	nil						
+				#else
 					variable = 	{
 									name: name_content,
 									symbaddr: symbaddr_content,
 									tagname: tagname_content					
 								}
-				end						
+				#end						
 
 			end
 
