@@ -41,4 +41,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-xml
+
+# Folder for works
+files/xml/*.xml
