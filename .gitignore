@@ -43,4 +43,6 @@ Temporary Items
 .apdisk
 
 # Folder for works
-files/xml/*.xml
+files/**/*.xml
+!template_equipmodel.xml
+!variables_spec.XML
