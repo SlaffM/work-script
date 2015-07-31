@@ -7,12 +7,13 @@ class Variables
 	attr_reader 	:variables
 
 	def initialize(file)	
-		@errors = []
+		#@errors = []
 		@file = file
 		#@doc 		= file.get_doc
 		@variables 	= build_variables_list
 	end	
-=begin
+=begin
+
 
 	def expression
 		"Subject/Apartment/Variable"
@@ -21,7 +22,8 @@ class Variables
 	def get_nodes(xml)
 		xml.xpath(expression)
 	end
-	=end
+	=end
+
 
 =begin
 
@@ -53,11 +55,11 @@ class Variables
 		name_content = ""
 		symbaddr_content = ""
 		tagname_content = ""
-
+		
 
 		Parser.new(Nokogiri::XML.Reader(open(@file))) do
 			
-			variable = nil			
+			variable = {}			
 			inside_element 'Variable' do
 
 				for_element 'Name' do name_content = inner_xml end
@@ -76,9 +78,7 @@ class Variables
 
 			end
 
-			unless variable.nil? or variable.empty?	
-				variables << Variable.new(variable)
-			end
+			variables << Variable.new(variable) unless variable.empty?
 
 		end
 

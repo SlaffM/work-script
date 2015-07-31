@@ -3,8 +3,9 @@ $LOAD_PATH << 'modules'
 require 'lib_helper'
 
 
+file_variables = File.expand_path("C:\\Users\\modzhuk_vv\\Desktop\\1.xml")
 #file_variables = XML.new(File.expand_path("../files/xml/1.XML", __FILE__))
-file_variables = File.expand_path("../files/xml/bad_1.XML", __FILE__)
+#file_variables = File.expand_path("../files/xml/bad_1.XML", __FILE__)
 file_archives = XML.new(File.expand_path("../files/xml/archives.XML", __FILE__))
 #file_equipmodel = XML::XML.new(File.expand_path("../files/xml/template_equipmodel.xml", __FILE__))
 

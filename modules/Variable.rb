@@ -11,7 +11,7 @@ class Variable
 				:signal_short_name
 				
 	def initialize(variable)	
-		@errors = []
+		#@errors = []
 		create_headers(variable) unless variable.empty?
 	end
 
